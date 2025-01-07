@@ -4,7 +4,7 @@ LLM camp by Dr. Huajun Zeng
 # Syllabus
 
 
-
+| |  |  |
 | :---: | :---: | ----- |
 | **Week** | **Date** | **Content** |
 | 1 | 2024-12-13 | Retrieval Augmented Generation (RAG) for LLM Why augmenting LLMs? Methods for LLM augmentation Augmenting LLMs with retrieval Augmenting LLMs with fine tuning Homework Content retrieval with embedding dataset |
