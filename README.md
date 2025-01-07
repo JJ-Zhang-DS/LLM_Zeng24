@@ -1,10 +1,10 @@
 # LLM_Zeng24
-LLM camp by Huajun Zeng
+LLM camp by Dr. Huajun Zeng
 
 # Syllabus
 
 
-| Advanced Large Language Model (LLM) Course |  |  |
+
 | :---: | :---: | ----- |
 | **Week** | **Date** | **Content** |
 | 1 | 2024-12-13 | Retrieval Augmented Generation (RAG) for LLM Why augmenting LLMs? Methods for LLM augmentation Augmenting LLMs with retrieval Augmenting LLMs with fine tuning Homework Content retrieval with embedding dataset |
