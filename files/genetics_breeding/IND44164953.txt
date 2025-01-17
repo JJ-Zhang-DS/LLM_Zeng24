@@ -1,0 +1,571 @@
+See discussions, st ats, and author pr ofiles f or this public ation at : https://www .researchgate.ne t/public ation/43279533
+Genomic Selection for Crop Improvement
+Article    in  Crop Scienc e · Januar y 2009
+DOI: 10.2135/ cropsci2008.08.0512  · Sour ce: O AI
+CITATIONS
+1,620READS
+8,592
+3 author s, including:
+Mark E Sorr ells
+Cornell Univ ersity
+510 PUBLICA TIONS    43,004  CITATIONS    
+SEE PROFILE
+Jean-L uc Jannink
+Unit ed St ates Dep artment of Agricult ure
+374 PUBLICA TIONS    21,479  CITATIONS    
+SEE PROFILE
+All c ontent f ollo wing this p age was uplo aded b y Mark E Sorr ells on 22 May 2014.
+The user has r equest ed enhanc ement of the do wnlo aded file.
+CROP SCIENCE , VOL. 49, JANUARY –FEBRUARY  2009   1REVIEW & INTERPRETATION
+The use of marker-assisted selection (MAS) in plant breeding 
+has continued to increase in the public and private sectors. 
+Most applications, however, have been constrained to simple, monogenic traits (reviewed by Xu and Crouch, 2008). While MAS has had signifi  cant impacts in backcrossing of major genes 
+into elite varieties (Holland, 2004), backcrossing is regarded as the most conservative of breeding methods because improvement occurs through the pyramiding of only a few target genes (Lee, 1995). Gene pyramiding is ineffi   cient for quantitative traits that 
+are often controlled by many small-eff  ect quantitative trait loci 
+(QTL; Kearsey and Farquhar, 1998).
+Current MAS methods are better suited for manipulating a 
+few major eff  ect genes than many small-eff  ect genes (Dekkers and 
+Hospital, 2002). Unfortunately, these small-eff  ect genes underlie 
+the complex polygenic traits that are crucial for the success of new crop varieties (Crosbie et al., 2003). Two primary limitations to MAS are (i) the biparental mapping populations used in most QTL studies do not readily translate to breeding applications and (ii) statistical methods used to identify target loci and implement Genomic Selection for Crop Improvement
+Elliot L. Heff  ner, Mark E. Sorrells, and Jean-Luc Jannink*
+ABSTRACT
+Despite important strides in marker technolo-
+gies, the use of marker-assisted selection has stagnated for the improvement of quantitative traits. Biparental mating designs for the detec-tion of loci affecting these traits (quantitative trait loci [QTL]) impede their application, and the statistical methods used are ill-suited to the traits’ polygenic nature. Genomic selection (GS) has been proposed to address these defi  cien-
+cies. Genomic selection predicts the breeding values of lines in a population by analyzing their phenotypes and high-density marker scores. A key to the success of GS is that it incorporates all marker information in the prediction model, thereby avoiding biased marker effect estimates and capturing more of the variation due to small-effect QTL. In simulations, the correlation between true breeding value and the genomic estimated breeding value has reached levels of 0.85 even for polygenic low heritability traits. This level of accuracy is suffi  cient to consider 
+selecting for agronomic performance using marker information alone. Such selection would substantially accelerate the breeding cycle, enhancing gains per unit time. It would dra-matically change the role of phenotyping, which would then serve to update prediction models and no longer to select lines. While research to date shows the exceptional promise of GS, work remains to be done to validate it empirically and to incorporate it into breeding schemes.E.L. Heff  ner and M.E. Sorrells, Dep. of Plant Breeding and Genetics, 
+Cornell Univ., Bradfi  eld Hall, Ithaca, NY 14853; J.-L. Jannink, USDA-
+ARS, R.W. Holley Center for Agriculture and Health, Cornell Univ., Ithaca, NY 14853. Received 2 Sept. 2008. *Corresponding author (jeanluc.jannink@ars.usda.gov).
+Abbreviations:  BLUP , best linear unbiased predictor; EBV , estimated 
+breeding value; G×E, genotype × environment GEBV, genomic esti-mated breeding value; GS, genomic selection; LD, linkage disequilib-rium; MAS, marker-assisted selection; QTL, quantitative trait locus; RR, ridge regression; SR, stepwise regression; TBV, true breeding value.
+Published in Crop Sci. 49:1–12 (2009).
+doi: 10.2135/cropsci2008.08.0512© Crop Science Society of America677 S. Segoe Rd., Madison, WI 53711 USA
+All rights reserved. No part of this periodical may be reproduced or transmitted in any 
+form or by any means, electronic or mechanical, including photocopying, recording, or any information storage and retrieval system, without permission in writing from the publisher. Permission for printing and for reprinting the material contained herein has been obtained by the publisher.
+2 WWW.CROPS .ORG CROP SCIENCE , VOL. 49, JANUARY –FEBRUARY  2009MAS have been inadequate for improving polygenic traits 
+controlled by many loci of small eff  ect. The application 
+of genomic selection (GS) proposed by Meuwissen et al. (2001) to breeding populations using high marker densi-ties is emerging as a solution to both of these defi  ciencies. 
+We review here current GS methods and their perfor-mance. In addition, we present future directions for GS research and some exciting opportunities GS provides that could revolutionize crop improvement.
+CURRENT MAS LIMITATIONS
+The most common method of QTL detection is the use of a biparental mapping population. While these studies are important to the understanding of genetic architecture, building mapping populations distinct from breeding populations often strains the resources of a breeding pro-gram. Available resources limit the size of mapping popu-lations and, consequently, the accuracy of QTL position and eff  ect estimates (Dekkers and Hospital, 2002; Schön 
+et al., 2004). Also, allelic diversity and genetic background eff ects that are present in a breeding program will not be 
+captured with a single biparental population. Therefore, multiple mapping populations are needed, QTL positions require validation, and QTL eff  ects must be reestimated 
+b y  b reeders  in  th eir  specifi  c germplasm. The validation 
+in locally adapted germplasm is important because poor estimates of the numerous small-eff  ect QTL will lead to 
+gains from MAS that are inferior to traditional pheno-typic selection (Bernardo, 2001). Therefore, the resources required for QTL detection coupled with validation and eff ect reestimation limit the eff  ectiveness of biparental 
+population derived QTL for MAS in plant breeding pop-ulations (reviewed by Holland, 2004).
+To avoid this disconnect between biparental and breed-
+ing populations, linkage disequilibrium (LD)–based map-ping can be used for dissecting complex traits in breeding populations that already have extensive phenotypic data across locations and years (Jannink et al., 2001; Rafalski, 2 00 2 ) .  T hi s  s tr a t e gy  a v o i ds  t h e  n e e d  t o  d e v e l o p  s p e c i al  mapping populations that impose an additional burden on breeding programs. Also, mapping within breeding pop-ulations will allow for QTL identifi  cation and allelic value 
+estimates that can be directly utilized by MAS without the need for extensive validation (Breseghello and Sor-rells, 2006; Holland, 2004). However, low heritability, small population sizes, few large-eff  ect QTL, confounding 
+population structure, and arbitrary signifi  cance thresholds 
+found in current association mapping eff  orts allow iden-
+tifi cation of only a few QTL with overestimated eff  ects 
+(Beavis, 1998; Schön et al., 2004; Xu, 2003a).
+To minimize the limitations for successful MAS, 
+Lande and Thompson (1990) proposed a visionary two-step approach: (i) select signifi  cant markers from large 
+marker sets, and (ii) combine phenotypic information with signifi  cant markers in a selection index that would 
+explain a signifi  cant proportion of additive genetic vari-
+ance. In the fi  rst step, they were unable to estimate all 
+marker eff  ects simultaneously with simple regression due 
+to the lack of degrees of freedom. Therefore, they pro-posed selecting the most signifi  cant markers from the pre-
+vious generation via multiple linear regressions and then reestimating eff  ects of the selected markers in the current 
+generation with independent multiple regressions (Lande and Thompson, 1990).
+Lande and Thompson (1990) introduced this two-
+s t e p  a p p r o a c h  t o  h a n dl e  l a r g e  ma r k e r  s e ts  b e c a u s e  t h e y  estimated that hundreds of molecular markers would be needed to capture a signifi  cant proportion of the additive 
+genetic variance. In the early 1990s, genomewide marker coverage was a limiting factor for MAS, but in recent years, plant breeders have encountered a major shift in the amount of genomic information available due to the rapid advances in marker technologies. Although genotyping is still a major expense, the declining costs per marker data point have facilitated large-scale genotyping eff  orts 
+in breeding programs. For example, the Monsanto Com-pany (St. Louis, MO) reported that from 2000 to 2006, they experienced a sixfold decrease in cost per marker data point and increased the volume of their marker data by 40-fold (Eathington et al., 2007). The availability of abundant markers and the reduction of genotyping costs will present new tools for plant breeders only if statistical methodologies for the utilization of genomewide marker coverage are developed.
+GENOMIC SELECTION 
+FOR BREEDING VALUE ESTIMATION
+The two-step process of Lande and Thompson (1990) has 
+been criticized as an ineffi   cient use of available data (Meu-
+wissen et al., 2001): one would rather want to use all avail-able data in a single step to achieve maximally accurate estimates of marker eff  ects. Genomic selection is a form of 
+MAS that simultaneously estimates all locus, haplotype, or marker eff  e c ts  a c r o s s  t h e  e n tir e  g e n o m e  t o  c al c ul a t e  
+genomic estimated breeding values (GEBVs; Meuwissen et al., 2001). This approach contrasts greatly with traditional MAS because there is not a defi  ned subset of signifi  cant 
+markers used for selection. Instead, GS analyzes jointly all 
+markers  on a population attempting to explain the total 
+genetic variance with dense genomewide marker cover-age through summing marker eff  ects to predict breeding 
+value of individuals (Meuwissen et al., 2001).
+The central process of GS is the calculation GEBVs 
+for individuals having only genotypic data using a model that was “trained” from individuals having both pheno-typic and genotypic data (Fig. 1; Meuwissen et al., 2001). The population of individuals with both phenotypic and genotypic data is known as the “training population” 
+CROP SCIENCE , VOL. 49, JANUARY –FEBRUARY  2009  WWW.CROPS .ORG 3et al., 2001), and 15 to 20 kb in a diversity panel of sor-
+ghum ( Sorghum bicolor ; Hamblin et al., 2005). Examples 
+from diversity panels may give rough predictions of LD decay in a species, but because many factors aff  ect LD, 
+individual breeding programs will need to determine LD decay rates on a case-by-case basis in their specifi  c breed-
+ing populations.
+Linkage disequilibrium estimates can be used to deter-
+mine target marker densities for GS. For example, Calus and Veerkamp (2007) used the average r
+2 between adjacent 
+markers as a measure of their marker density relative to the decay of LD. They found that for a high heritability trait, average adjacent marker r
+2 of 0.15 was suffi   cient, but for 
+a low heritability trait, increasing the r2 to 0.2 improved 
+the accuracy of GEBV predictions. These marker densities may still be out of reach for some crops or populations. Looking to the near future, however, high throughput sequencing has made marker discovery aff  ordable for most 
+crop species, and the continued reduction of genotyping costs will facilitate dense genomewide marker coverage for all crop species (reviewed in Zhu et al., 2008). Note that the conditions of complete genome saturation and of at least one marker in LD with each QTL need not be met to derive useful prediction models for GEBV. While it is tempting to surmise a minimum number of markers needed to obtain useful GEBVs, the many factors aff  ect-
+ing this number and the lack of empirical results currently available would make any guess meaningless. Clearly, this subject requires urgent attention.
+STATISTICAL MODELS 
+AND PERFORMANCE
+The challenge of QTL analysis is the selection of the 
+appropriate statistical model to identify QTL and esti-mate their eff  ects (Broman and Speed, 2002). In breeding 
+programs, statistical methods for GS will need to simul-taneously estimate many marker eff  ects from a limited 
+number of phenotypes. A greater number of explanatory as  i t  i s  u s e d  t o  e s tima t e  m o d e l  p ar am e t e rs  
+that will subsequently be used to calculate GEBVs of selection candidates (e.g., breed-ing lines) having only genotypic data (Fig. 1). These GEBVs are then used to select the individuals for advancement in the breeding cycle. Therefore, selection of an individual without phenotypic data can be performed by using a model to predict the individual’s breeding value (Meuwissen et al., 2001). To maximize GEBV accuracy, the training population must be representative of selec-tion candidates in the breeding program to which GS will be applied.
+Historically, estimated breeding values 
+(EBVs) for quantitative traits have been cal-culated by best linear unbiased prediction (BLUP) based only on phenotypic data of individuals and their relatives (Henderson, 1984). The use of EBVs via BLUP has been popular in animal breeding and in recent years has been used by plant breeders (reviewed by Piepho et al., 2007). However, data on markers linked to known QTL can also be used for calculation of EBVs (Fernando and Grossman, 1989); this method was predicted to increase gains from selection in animal breeding up to 38% (Meuwissen and Goddard, 1996). These results were encouraging, but they require extensive prior QTL discovery eff  orts in non-
+breeding populations.
+MARKER DENSITY AND 
+LINKAGE DISEQUILIBRIUM
+Genomic selection diff  ers from current MAS strategies 
+because instead of only using markers that have a pre-defi ned signifi  cant correlation with a trait, all markers are 
+used to estimate breeding values for each genot ype. Conse-quently, dense marker coverage is needed to maximize the number of QTL in LD with at least one marker, thereby also maximizing the number of QTL whose eff  ects will 
+b e  c a p tur e d  b y  mar k e rs .  T ar g e t  mar k e r  d e ns i ty  will  b e  dictated by the rate of LD decay across the genome, as assessed by the relationship between intermarker coeffi   -
+cient of determination, r
+2, and genetic distance.
+Rate and pattern of LD decay are aff  ected by popula-
+ti o n  c hara cte ris ti cs  s u c h  as  e v o l u ti o nary  his to ry ,  ma ting  system, population size, admixture, recombination rate, and selection eff  ects (Gaut and Long, 2003). Therefore, 
+LD decay rates are highly variable among species, popula-tions, and genomic regions. Examples of this variability in LD decay rates include the following: 75 to 500 kb in a diversity panel of rice ( Oryza sativa ; Mather et al., 
+2007), 10 to 20 cM (roughly 50–100 Mb) in elite culti-vars of wheat ( Triticum aestivum;  Chao, 2007; Maccaferri 
+et al., 2005), 0.1 to 1.5 kb in diverse inbred lines of maize (Zea mays  ssp. mays; Remington et al., 2001; Tenaillon 
+Figure 1. Diagram of genomic selection (GS) processes starting from the training 
+population and selection candidates continuing through to genomic estimated breeding value (GEBV)–based selection. Note that while we show here a single occurrence of model training, training can be performed iteratively as new phenotype and marker data accumulate.
+4 WWW.CROPS .ORG CROP SCIENCE , VOL. 49, JANUARY –FEBRUARY  2009variables (markers) than observations (phenotyped lines) 
+leads to a lack of degrees of freedom that must be handled through the selection and use of the most appropriate sta-tistical model, that is, the model that results in the highest G E B V  a c c u r a c y  w i t h  c o n s i d e r a t i o n  o f  m o d e l  c o m p l e x -ity and computation requirements. In the assessment of model performance, GEBV accuracy has a precise defi  ni-
+tion, namely, the Pearson correlation between the GEBV and the true breeding value (TBV). Accuracy defi  ned in 
+this  w a y  is  dir e ctl y  p r o p o rti o nal  t o  gain  fr o m  s e l e cti o n  when selecting on the GEBV, that is, R = irσ
+A, where R 
+is the response, i is the selection intensity, r is the accu-
+racy defi  ned above, and σA is the square root of the addi-
+tive genetic variance of TBV (Falconer and Mackay, 1996, p. 189). We briefl  y describe here three models: stepwise 
+regression, ridge regression, and Bayesian estimation.
+Stepwise Regression for MAS
+Traditional MAS considers marker eff  ects as fi  xed, requir-
+ing stepwise regression (SR) approaches that avoid the lack of degrees of freedom problem by fi  tting markers singly 
+or in small groups. After the model selection process dur-ing which markers are added or removed from the model on the basis of arbitrary signifi  cance thresholds, nonsig-
+nifi cant markers are assigned an eff  ect of zero and signifi  -
+cant marker eff  ects are simultaneously tested to estimate 
+their eff  ects. This stepwise approach to set nonsignifi  cant 
+marker eff  ects to zero is critical for maintaining model 
+estimability (Lande and Thompson, 1990). Signifi  cance 
+thresholds that may maximize response to selection can-not be determined analytically, although guidelines have been established through simulation (Hospital et al., 1997; Moreau et al., 1998). The general guideline is that liberal p-value thresholds improve selection gain (Hospital et al., 
+1997; Moreau et al., 1998). Nevertheless, when only sig-nifi cant marker eff  ects are estimated, only a portion of the 
+gen eti c  v arian c e  will  be  cap tured  ( Goddard  an d  Ha y es,  2007) and eff  ects retained in the model can be greatly 
+overestimated (Beavis, 1998; Hayes, 2007), particularly when many eff  ects are tested.
+Limitations of SR for MAS in practice were reported 
+by Moreau et al. (2004). In 300 test-crossed maize prog-enies evaluated in 14 trials over 11 locations for dry grain yield and grain moisture, they discovered 16 QTL for dry grain yield and 12 QTL for grain moisture explain-ing 50% of the total phenotypic variance of both traits. When using an index combining phenotypic and marker information for a single cycle followed by two cycles of marker-only selection, they observed no genetic gain from the two cycles of marker selection (Moreau et al., 2004). They suggested that this ineffi   ciency of MAS could 
+be caused by fi  xation of major eff  ect loci in the fi  rst cycle 
+of selection and inaccurate estimation of remaining eff  ects 
+resulting in no gain from the cycles of marker selection (Moreau et al., 2004). These complications were probably 
+consequences of SR that detects only large eff  ects and that 
+overestimates eff  ects.
+In a GS simulation by Meuwissen et al. (2001), SR 
+resulted in low GEBV accuracy due to limited detec-tion of QTL. The simulated outcrossing population had an eff ective population size of 100 with a trait heritabil-
+ity of 0.5. After 1000 generations of random mating to establish mutation-drift equilibrium, generation 1001 had a population size of 200 (100 males; 100 females). Two generations (1002 and 1003) of size 2000 with 20 half-sib families of size 100 individuals were then simulated. Generations 1001 and 1002 were used to train the model while GEBV accuracy was calculated on generation 1003. Genotypic data consisted of 101 multi-allelic markers on each of 10 chromosomes of length 100 cM. Adjacent pairs of markers were considered haplotypes such that 50,000 haplotype eff  ects were estimated. The accuracy of GEBV 
+for SR (0.318) was less than that expected for strictly phe-notype-based BLUP (about 0.4; Meuwissen et al., 2001). In agreement with Lange and Whittaker (2001), Meuwis-sen et al. (2001) concluded that SR’s procedure to identify marker subsets is suboptimal for MAS in situations where the majority of the additive genetic variance is generated by many QTL. Note, however, that the GEBV accuracy of SR depends on the details of the analysis: using the Meu-wissen et al. (2001) simulation design, Habier et al. (2007) found that SR produced an accuracy of 0.61. Habier et al. (2007) attributed this diff  erence to the use of a less-strin-
+gent signifi  cance threshold than was used by Meuwissen 
+et al. (2001). This conclusion was supported by simula-tions showing prediction accuracy changes with changes in signifi  cance thresholds (Piyasatian et al., 2007).
+Ridge Regression BLUP 
+for Genomic Selection
+The ridge regression BLUP (RR-BLUP) method can 
+simultaneously estimate all marker eff  ects for GS (Meu-
+wissen et al., 2001; Whittaker et al., 2000). Rather than categorizing markers as either signifi  cant or as having no 
+eff ect, ridge regression shrinks all marker eff  ects toward 
+zero (Breiman, 1995; Whittaker et al., 2000). The method makes the assumption that markers are random eff  ects 
+with a common variance (Meuwissen et al., 2001; Table 1). Equal variance does not assume that all markers have the same eff  ect (Bernardo and Yu, 2007) but that marker 
+eff ects are all equally shrunken toward zero. Nevertheless, 
+the assumption that individual markers have the same vari-ance is unrealistic, and therefore, RR-BLUP incorrectly treats all eff  ects equally (Xu, 2003b). Despite the incorrect 
+assumption of equal marker variance, RR-BLUP is supe-rior to SR because it can simultaneously estimate eff  ects 
+for all markers: by avoiding marker selection, it avoids the biases that go with that selection (Whittaker et al., 2000). 
+CROP SCIENCE , VOL. 49, JANUARY –FEBRUARY  2009  WWW.CROPS .ORG 5Also, a ridge regression approach is more appropriate than 
+SR for instances in which there are few or no large eff  ects 
+and many small eff  ects (Breiman, 1995), as is the case with 
+most quantitative traits.
+In the simulation by Meuwissen et al. (2001), RR-
+BLUP had a GEBV accuracy of 0.732, which was 41 and 33% greater than SR and phenotype-based BLUP, respec-tively. With higher SR signifi  cance thresholds, Habier et 
+al. (2007) reported that RR-BLUP resulted in 4 and 11% increase in GEB V accuracy compared to SR and tradi-tional BLUP, respectively. In addition to these studies, Muir (2007) simulated 512 genotypes with a low herita-bility trait ( h
+2 = 0.1) in each of four training generations. 
+These conditions resulted in an even higher RR -BLUP GEBV accuracy of 0.83 despite the lower heritability. This gain in GEBV accuracy was attributed to the four training generations used by Muir (2007), as opposed to two generations used in previous studies (Habier et al., 2007; Meuwissen et al., 2001).
+In a GS simulation on a population derived from a 
+biparental cross of maize inbreds, Bernardo and Yu (2007) found that relative to phenotypic selection, the increase in selection gain from RR-BLUP was 18% greater than that from SR for a highly heritable trait ( h
+2 = 0.8) controlled by 
+20 QTL. For a trait with low heritability ( h2 = 0.2) con-
+trolled by 100 QTL, the increase in selection gain from RR-BLUP was 43% greater than that from SR (Bernardo and Yu, 2007). Similar results were observed by Piyasatian et al. (2007), who found that in the fi  rst round of selec-
+tion in a simulated cross between two inbred parents, gain from selection from RR-BLUP was 109 and 32% greater than that of traditional BLUP and SR, respectively.
+Bayesian Estimation
+The simplifying assumption of equal and fi  xed marker 
+eff ect variances allows RR-BLUP parameters to be effi   -
+ciently computed using maximum likelihood methods (Meuwissen et al., 2001). While RR-BLUP can provide a conservative EBV by shrinking all marker eff  ects equally (Muir, 2007), the presumably incorrect assumption that 
+underlies it can lead to overshrinking of large eff  ects (Table 
+1; Meuwissen et al., 2001; Xu, 2003b). Bayesian meth-ods have been adopted to relax this assumption and bet-ter model marker eff  ects of diff  ering sizes (Hayes, 2007). 
+Here, a separate variance is estimated for each marker, and the variances are assumed to follow a specifi  ed prior dis-
+tribution (Meuwissen et al., 2001).
+Meuwissen et al. (2001) proposed two types of prior 
+distribution for the marker variance. The fi  rst type of prior 
+( B a y e s A )  u s e s  a n  i n v e r t e d  c h i - s q u a r e  d i s t r i b u t i o n  w i t h  degrees of freedom and scale parameters chosen so that the mean and variance of the distribution match the expected mean and variance of the marker variances. In the simula-tion design described above, BayesA outperformed both SR and RR-BLUP with a GEBV accuracy of 0.798. Dif-ferent parameter values for the BayesA inverted chi-square prior distribution have also been proposed that place much higher density on marker variances close to zero, thereby forcing more marker eff  ect estimates close to zero (ter 
+Braak et al., 2005; Xu, 2003b).
+The BayesA method of Xu (2003b) was applied to 
+data from a doubled haploid barley ( Hordeum vulgare ) pop-
+ulation of 145 lines with 127 single nucleotide polymor-phism markers covering 1500 cM for yield, heading date, maturity, test weight, lodging, and kernel weight. Xu (2003b) reported that SR and BayesA both found large-eff ect QTL but that BayesA provided better QTL location 
+and eff  ect estimation. Also, in simulation of a population 
+derived from a biparental inbred cross, ter Braak et al. (2005) found that BayesA prior parameters forcing more marker eff  ect shrinkage gave better estimates of QTL 
+eff ects than did the Meuwissen et al. (2001) parameters. 
+A comparison of these diff  erent prior parameterizations in 
+an association genetics rather than linkage mapping con-text has not been done.
+The second type of prior distribution Meuwissen et al. 
+(2001) proposed (BayesB) contrasts with BayesA by having a prior mass at zero, thereby allowing for markers with no 
+Table 1. General characteristics and trends of performance for traditional best linear unbiased predictor (BLUP) and genomic 
+selection methods. Note that these are general summaries based on current understanding of model performance.
+MethodMarker effect; 
+variance 
+assumptionsProportion
+of markers 
+ ﬁ tted in modelPerformance with increasedLarge-effect 
+QTLSmall-effect 
+QTLInbreeding 
+depression; loss 
+of diversityMarker 
+densityQTL† 
+number 
+Traditional
+BLUPN/A N/A N/A N/A Captured only 
+by phenotypeCaptured only 
+by phenotypeYes
+Stepwise regression Fixed Subset Reduced Reduced Overestimated Excluded Marginally Reduced
+RR-BLUP‡Random; Equal All Reduced§ Increased Underestimated Captured Reduced
+BayesA Random; 
+Unique All > 0All ? Reduced More accurately 
+estimatedCaptured Reduced
+BayesB Random; 
+Unique Some = 0All Insensitive§Reduced More accurately 
+estimatedCaptured Reduced
+†QTL, quantitative trait locus.
+‡RR, ridge regression.
+§Source: Fernando (2007).
+6 WWW.CROPS .ORG CROP SCIENCE , VOL. 49, JANUARY –FEBRUARY  2009eff ects. The inverted chi-square prior of BayesA may be set 
+to strongly regress variances toward zero, but it does not permit the value of zero itself. BayesB thus presents a more realistic prior because we expect that some regions of the genome will carry no QTL, so that some markers should have estimates of zero eff  ect. The results from Meuwissen 
+et al. (2001) showed that BayesB had a GEBV accuracy of 0.848, greater than all other methods tested. Of the Bayesian methods, BayesB not only was more accurate but was also less computationally demanding. Meuwissen et al. (2001) concluded that Bayesian methods outperformed RR-BLUP through better estimation of large-eff  ect QTL 
+by allowing for unequal variances.
+d e  R o o s  e t  a l .  ( 2 0 0 7 )  u s e d  B a y e s i a n  m o d e l i n g  a s  
+described by Meuwissen and Goddard (2004) in actual dairy cattle data for a single chromosome containing 32 markers with one being a known causal mutation for fat p e r c e n t a g e .  T h e y  c o m p a r e d  B a y e s i a n  G S  t h a t  u s e d  a l l  marker information to regression on the genotype at the known causal mutation and to traditional BLUP with no markers. Using a cross validation population of 1135, they concluded that Bayesian GS and regression on the causal mutation had similar accuracies (0.752 and 0.746, respec-tively), with both being super ior to traditional BLUP (EBV accuracy of 0.508). Interestingly, the GS analysis often did not place the causal mutation in the correct marker bracket but was nevertheless able to calculate accurate GEBV. This robustness of GEBV accuracy provides evidence that GS can perform well for breeders in the absence of the discov-ery of QTL (de Roos et al., 2007).
+In the future, genotyping costs will decrease, but it 
+is unlikely that phenotyping costs will also decrease, thus shifting goals toward reducing phenotyping and increas-ing genotyping. Bernardo and Yu (2007) suggested this shift would be feasible when the cost of a marker data point is 5000 times less than the cost of phenotyping a s in gl e  e n try .  R e gar dl e s s  o f  t h e  t hr e s h o l d ,  i t  i s  d e s ir a b l e  to decrease the number of phenotypic records needed for training models for accurate GEBVs. Simulations by Meu-wiss e n  e t  al .  ( 200 1 )  s h o w e d  tha t  wi th  2200  p h e n o typ i c  records, RR-BLUP and BayesB had GEBV accuracies of 0.732 and 0.848, respectively. When the number of pheno-typic records was reduced to 500, RR-BLUP and BayesB GEBV accuracies decreased to 0.579 and 0.708, respec-ti v ely (M euwissen et al. , 200 1 ) . Th us, th e eff  ect of low 
+numbers of phenotypic records was less severe for BayesB than for RR-BLUP. In addition, Fernando (2007) found that in contrast to RR -BLUP , BayesB’s GEBV accuracy did not decline as the number of markers increased. These fi ndings suggest that Bayesian methods may be better 
+s u i t e d  t o  h a n d l i n g  s i t u a t i o n s  w i t h  i n c r e a s e d  c o l i n e a r i ty  between markers caused by extremely large markers sets and limited phenotypic records (Table 1). Computational issues may arise for Bayesian methods under high marker densities and colinearities; these will need to be resolved 
+by improved statistical methods (ter Braak et al., 2005).
+INCLUSION OF A POLYGENIC EFFECT 
+TERM ACCOUNTING FOR KINSHIP
+Phenotypic information from relatives contribute to an 
+individual’s EBV because EBVs vary according to the additive relationship ( A) matrix, that is, a matrix that con-
+tains for each pair of individuals the proportion of alleles for which they are identical by descent (van Arendonk et al., 1994; Lynch and Walsh, 1998, p. 751). When markers are introduced into the analysis, some genetic eff  ects will 
+b e  c a p tur e d  b y  mar k e rs  in  LD  wi th  Q TL,  b u t  r es i d ual  genetic eff  ects will still be assumed to vary according to 
+the A matrix. These residual eff  ects can be captured by 
+including a polygenic term in the model. In association mapping, the inclusion of this matrix has been popular-ized as a statistical control for population structure and familial relatedness (Yu et al., 2006; Zhao et al., 2007).
+The A matrix can be calculated on the basis of the ped-
+igree or the marker data, with pedigree information pro-viding exact expected relationships and markers providing estimated realized relationships. When marker number is high enough that marker sampling plays a minor role (i.e., relationship estimates on the basis of markers are accurate), marker-estimated relationships will better refl  ect true 
+relationships than will pedigree-expected relationships. In particular, four mechanisms lead realized relationships to diverge from their expectation: random Mendelian seg-regation, segregation distortion, selection, and pedigree recording errors. For example, parental contributions to inbreds vary from their expected 50% because of random Mendelian segregation during selfi  ng. For the genomes 
+of maize and wheat, there is a 10% probability that single s e e d  d e c e n t –d e ri v e d  in b r e ds  will  ha v e  l ess  than  3 8  an d  43% genome contribution from one parent, respectively (Frisch and Melchinger, 2007).
+The value of including a polygenic eff  ect term in the 
+model will depend strongly on marker density available in the study for two reasons. First, if density is such that all QTL are in strong LD with a marker, all genetic eff  ects 
+will be absorbed by markers and none will be left for the polygenic term to capture (Bernardo and Yu, 2007; Meu-wissen et al., 2001; Zhong and Jannink, 2007). Second, even markers that are in linkage equilibrium with all QTL carry information about relationships among individuals, and this information contributes to the accuracy of GEBV (Habier et al., 2007). Indeed, this contribution depends on the number of markers included in the GS method, and because SR uses only a subset of markers, it benefi  ts least 
+from genetic relationship contributions to GEBV accu-racy (Habier et al., 2007).
+Research to look explicitly at the value of including a 
+polygenic eff  ect term used adjacent-marker r
+2 as a measure 
+CROP SCIENCE , VOL. 49, JANUARY –FEBRUARY  2009  WWW.CROPS .ORG 7of marker density. For a high heritability trait ( h2 = 0.5), 
+the polygenic eff  ect term increased GEBV up to an adja-
+cent-marker r2 of 0.14, while for a low heritability trait ( h2 
+= 0.1), the term made no diff  erence already at an r2 of 0.11 
+(Calus and Veerkamp, 2007). At lower adjacent-marker r2, 
+the polygenic term fulfi  lls its role of explaining genetic 
+variance not absorbed by markers, and it therefore con-tributes to GEBV accuracy (Calus and Veerkamp, 2007; Villanueva et al., 2005).
+SELECTION INDEX THEORY 
+APPLIED TO GENOMIC SELECTION
+A selection index integrates and weights multiple traits 
+to achieve greater gains than if traits with independent thresholds are individually or collectively selected (Hazel and Lush, 1942; Hazel, 1943). Selection indices can incor-porate marker data as indirect selection traits (Lande and Thompson, 1990; Neimann-Sorensen and Robertson, 1961; Smith, 1967). However, current MAS applied to loci selected by SR violates the selection index assump-tions of multivariate normality and small changes in allele frequencies because selection is based on only few large eff  ect loci (Dekkers, 2007; Lande and Thompson, 
+1990). Because GS is based on many markers distributed throughout the genome, index selection assumptions are met, providing an opportunity to use index selection the-ory to predict response to GS (Dekkers, 2007).
+Dekkers (2007) used selection index theory by add-
+ing marker-deriv ed breeding values as a separate corre-lated trait to the selection index (Lande and Thompson, 1990). In a simulated pig breeding program, selection on only marker data could outperform phenotypic selection for low heritability traits (0.1) even with moderate GEBV accuracy (0.55). When marker and phenotypic data were both used for a single trait, even greater accuracies were observed. This increase was due to marker information that allowed for within family selection (Dekkers, 2007).
+For two negatively correlated traits with heritabilities 
+of 0.3 and 0.1, Dekkers (2007) found using only markers increased gains from selection over phenotypic selection by 8.5% for the index of the two traits and 66% for the low heritability trait alone. Using both markers and phenotype increased gains from selection over phenotypic selection by 21% for the index of the two traits and 80.5% for the low heritability trait alone. These results show the poten-tial of GS to increase gains for multiple traits especially in cases where phenotypic data is available on selection candidates and traits have low heritability.
+MAINTAINING GENETIC DIVERSITY AND 
+REDUCING INBREEDING DEPRESSION
+Gains from selection can be increased by raising the selec-
+tion intensity or the accuracy of EBV of breeding lines. Increased selection intensity reduces the number of lines selected, thus lowering the eff  ective population size and 
+thereby increasing the loss of genetic variability. Tradi-tional BLUP increases EBV accuracy by incorporating ancestor and collateral relative phenotypes in the calcula-tion (Henderson, 1984). But including family information in EBV calculation increases the correlation between EBV of family members, making it more likely that multiple sibs will be selected (Wray and Thompson, 1990). Sibling coselection, in turn also reduces eff  ective population size. 
+Therefore, while increased selection intensity and a higher EBV accuracy lead to greater short-term gains from selec-tion, they both may reduce long-term gains by decreas-ing genetic variation and increasing rates of inbreeding (Quinton et al., 1992).
+Daetwyler et al. (2007) reviewed these issues and 
+d e t e r m i n e d  t h a t  G S  d i ff  ers from simple phenotypic 
+selection and traditional BLUP by using markers to more accurately estimate Mendelian sampling variation, that is, deviations between siblings within families. Mendelian sampling variation, generated by random segregation, is created anew each generation. Selecting strictly on this variation therefore enables sustained genetic progress by decreasing coselection of sibs and thus reducing inbreed-ing and the loss of genetic variation (Woolliams et al., 1999). Optimized selection schemes have been proposed where parent combinations are restricted by their level of coancestry to limit the loss of genetic variation and the rate of inbreeding (Grundy et al., 1998; Meuwis-s e n ,  1 9 9 7 ) .  I n  t h e s e  s c h e m e s ,  a n  i n d i v i d u a l ’ s  s e l e c t i v e  advantage depends largely on the Mendelian sampling term, that is, on its performance relative to its siblings (Avendaño et al., 2004). Unlike traditional BLUP based on pedigree data that account for average relationships, tracking markers enables GS to also track the random segregation that makes up the Mendelian sampling term. The benefi  t is both more accurate EBV s and decreased 
+correlation between EBVs within families, countering the mechanism whereby the use of family informa-tion increases loss of genetic diversity (Daetwyler et al., 2007). Note that the greater emphasis placed by GS on the Mendelian sampling term does not completely negate variable long-term genetic contributions among individuals and its consequent increase in inbreeding rate. In particular, superior individuals carry superior alleles, and selection of those alleles will, in turn, lead their carriers to leave more off  spring behind (Daetwyler 
+et al., 2007). Thus, it still may be advisable to manage rates of inbreeding (e.g., Avendaño et al., 2004) even in the context of GS. Nevertheless, the advantages of GS in regard to inbreeding and the maintenance of genetic diversity should prove valuable for crops such as alfalfa (Medicago sativa ) that suff  er fro m inbreeding dep ressi o n  
+and for maintaining genetic variation in advanced cycle breeding programs.
+8 WWW.CROPS .ORG CROP SCIENCE , VOL. 49, JANUARY –FEBRUARY  2009GAINS FROM SELECTION 
+PER UNIT TIME
+Marker-assisted selection strategies increase gain mainly 
+through gain per unit time, rather than gain per cycle (Ber-nardo and Yu, 2007; Edwards and Johnson, 1994; Hospital et al., 1997; Koebner and Summers, 2003; Meuwissen et al., 2001; Muir, 2007). To ascertain GS’s impact on gains per unit time, Schaeff  er (2006) suggested a plan for imple-
+menting GS into a dairy breeding program. Through reduction in time and costs needed to prove the value of a bull, assuming a GEBV accuracy of 0.75, Schaeff  er (2006) 
+determined that GS could provide a twofold increase in rate of genetic gain and save 92% of the costs of the cur-rent progeny test based breeding program.
+I n  p l a n t s ,  t h e  i m p o r t a n c e  o f  g e n e r a t i o n  t i m e  v a r i e s  
+between crops, but the goal of reducing cycle time remains. In maize, a crop that uses doubled haploids and off  -season 
+nurseries, test cross performance selection still requires at least 2 yr (Bernardo and Yu, 2007), providing an oppor-tunity for GS to reduce unit time per selection cycle by reducing the need for progeny test data in every cycle. In the more extreme case of oil palm ( Elaeis  guineensis  Jacq.), 
+which takes 19 yr to complete a cycle of selection, Wong and Bernardo (2008) reported that GS reduced the selection cycle to 6 yr. Even with small population sizes ( N = 50) that 
+adversely eff  ected GEBV accuracy, their simulations indi-
+cated that GS would outperform MARS and phenotypic selection when considering gain per unit cost and time.
+GENOTYPE × ENVIRONMENT 
+INTERACTIONS AND EPISTASIS
+Genotype × environment (G×E) interaction is a challenge 
+in plant breeding because the large number of experimen-tal lines and environments, that is, locations and years, make it impossible to test a line in all possible environ-mental conditions of a breeding program ’ s target region (Allard and Bradshaw, 1964). Consider, however, that the genotype of any line is composed of alleles that, over time, will have been evaluated in a larger sample of target envi-ronments than would be feasible for any particular line. Thus, it may be possible to accurately predict GEBV even in the presence of high G×E. As an extreme example, for winter annual crops, a severe winter may only occur once a decade. Variety releases for the region need to be hardy to such winters because crop failure even once per decade is too frequent. With GS, a given generation of experimental lines need never experience a test winter if the alleles they carry were characterized during a severe winter. Simi-lar cases include the infrequent but devastating conditions caused by severe drought, fl  ooding, disease pressure, and 
+insect infestation. The broader insight that these examples illustrate is that with GS, lines are not evaluated solely on the basis of their own phenotypic performance, but on the basis of information shared across other lines, other years and locations, and even possibly other breeding programs. 
+This information sharing should provide GS with stability in the face of G×E.
+Anticipating the eff  ect of epistasis on the potential of 
+GS is diffi   cult. Almost all GS prediction accuracy eval-
+uations derive from simulations that adopted additive genetic models. There is current debate, at both theoreti-cal and empirical levels, of the likely importance of epista-sis in the architecture of quantitative traits (Carlborg and Haley, 2004; Hill et al., 2008; Holland, 2007; Mackay, 2008). To examine this issue, it is essential to distinguish between the genotypic value versus the breeding value of a line (Falconer and Mackay, 1996). The genotypic value is the expected phenotype of the line given its genotype and includes additive and nonadditive genetic eff  ects. The 
+breeding value is the expected phenotype of line’s prog-eny and includes only additive eff  ects. The additive mod-
+els used by GS should predict the breeding value rather than genotypic value (Goddard and Hayes, 2007). Conse-quently, correlations between GEBVs and line phenotypes may well be lower than those obtained in additive eff  ect 
+simulations, but they should nevertheless refl  ect a line’s 
+value as a parent. For cases in which estimates of genotypic value are desired in the presence of epistasis, methods are currently being developed and tested (e.g., Gianola et al., 2006; Gianola and van Kaam, 2008; Gonzalez-Recio et al., 2008). Further empirical evaluation of the prediction accuracies of these methods should help address the ongo-ing debate over the importance of epistasis in the mapping of genotype to phenotype. Because of the small contri-bution that epistasis makes to breeding value (Holland, 2001), GS using simpler additive models should be eff  ec-
+tive for maximizing gain from selection.
+FUTURE DIRECTIONS
+Statistical Methods
+A statistical model will more faithfully capture QTL infor-mation as its assumptions about the underlying genetic architecture, made explicit in the prior distributions of QTL eff  ects or variance, are more correct (Meuwissen et 
+al., 2001). There are two obstacles to translating this fact into improved models. First, GS may gain in accuracy not just by capturing more QTL information but also by better capturing relationship information (Habier et al., 2007). There may be a tradeoff   between the kinds of prior 
+distributions of eff  ects that promote the use of these two 
+information sources (Habier et al., 2007). Second, we sim-ply do not know, for any complex trait, what the under-lying genetic architecture is, and thus, we do not have adequate prior knowledge at our disposal. Therefore, sta-tistical models that are relatively insensitive to the under-lying architecture may be optimal for most populations, although identifying those models remains challenging.
+CROP SCIENCE , VOL. 49, JANUARY –FEBRUARY  2009  WWW.CROPS .ORG 9Finally, the marker technologies on which GS meth-
+ods depend are constantly changing. Next-generation sequencing technologies and improvement of genotyping platforms present breeders with powerful tools for char-acterizing the genetic composition of their germplasm. As these technologies continue to evolve, they will provide quantitatively and qualitatively diff  erent information (e.g., 
+copy number and epigenetic variation; Stranger et al., 2007; Zhang et al., 2008), and statistical machinery will also need to evolve to use this information effi   ciently to 
+increase prediction accuracy.
+Software and Database Development
+While statistical methods of prediction must be continually advanced, an integral part of their performance will be the software packages used to implement them. In conjunc-tion with this software, robust databases that can effi   ciently 
+link breeding lines, testing environments, genotypic data, phenotypic data, and breeding programs will need to be developed to simplify fl  ow and use of information. While 
+private breeding companies have invested heavily in data management systems that will likely be effi   cient in execut-
+ing GS (e.g., Eathington et al., 2007), public sector breed-ing programs also need database software that integrates the wide variety of data they generate (Heckenberger et al., 2008; Tinker and Yan, 2006). Recent developments in the public sector are promising, such as the Barley Coor-dinated Agricultural Project Hordeum Toolbox (http://hordeumtoolbox.org/), the GDPDM database schema that links with the association analysis software TASSEL (http://www.maizegenetics.net); the German GABI-BRAIN project (http://brain.uni-hohenheim.de/eng/indexeng.html), and the Canadian COOL-DUDE (Yan 
+and Tinker, 2007). Adaptation of these tools to link with GS and development of user-friendly GS analyses them-selves are needed to take GS from theory to practice.
+CHANGES TO BREEDING 
+PROGRAM STRUCTURE
+Th e accuraci es of GEB V observ ed in researc h off  er the 
+possibility that future elite and parental lines will be selected on their GEBV rather than on their phenotypic records from extensive fi  eld testing. The most immediate 
+impact of this circumstance would be a great increase in the speed of the breeding cycle (Fig. 2; Wong and Ber-nardo, 2008), thereby increasing selection gains per unit time. This shift would also fundamentally alter the role of phenotyping in plant breeding (Fig. 2). Note that Fig. 2 off ers a somewhat futuristic view of the use of GS, contin-
+gent on its validation in practice. We do not, at this point, a d v o c a t e  d i s p e n s i n g  w i t h  p h e n o t y p i c  e v a l u a t i o n  b e f o r e  parent selection.
+The purpose of phenotyping now is to select the best 
+lines from a segregating population and to evaluate fewer lines with greater replication in each cycle of selection. But in a GS driven breeding cycle, the purpose of phe-notyping is to estimate or reestimate marker eff  ects. It is 
+far from clear at this point whether it will be advanta-geous to evaluate only the best lines or to evaluate few lines with high replication. Figure 2 therefore separates the germplasm improvement cycle from the prediction model improvement cycle. Indeed, if we use the guide-lines for optimal QTL linkage mapping, evaluation should include not just the best but the best and the worst lines 
+Figure 2. Flow diagram of a genomic selection breeding program. Breeding cycle time is shortened by removing phenotypic evaluat ion of 
+lines before selection as parents for the next cycle. Model training and line development cycle length will be crop and breedin g program 
+speciﬁ  c. (GEBV = genomic estimated breeding value.)
+10 WWW.CROPS .ORG CROP SCIENCE , VOL. 49, JANUARY –FEBRUARY  2009(Darvasi and Soller, 1992; Lander and Botstein, 1989) and 
+many unreplicated lines instead of few replicated lines (Knapp and Bridges, 1990). Figure 2 also emphasizes the need for model updating and reevaluation. Marker eff  ects 
+may change as a result of allele frequency changes (Muir, 2007) or of epistatic gene action. Model updating with each breeding cycle should mitigate reduced gains from GS caused by these mechanisms. Thus, GS could radically c han g e  th e  p ra c ti c e  o f  fi  eld evaluation for breeders. Of 
+course, regardless of the breeding method used, fi  nal fi eld 
+evaluations of varieties across the target environments will be needed before they are distributed to farmers.
+GS may also diminish the need for breeders to select 
+parents strictly from the set of lines evaluated in their tar-get environments (Goddard and Hayes, 2007). Once a predictive linear model is established for their target envi-ronments, any genotype with high target environment specifi  c GEBV will become a candidate. Thus, GS should 
+facilitate germplasm exchange and increase the probabil-ity of selecting useful germplasm.
+CONCLUSIONS
+It has been predicted for more than two decades that molecular marker technology would reshape breeding programs and facilitate rapid gains from selection (Stuber e t  al . ,  1 9 8 2 ;  T anks l e y  e t  al . ,  1 9 8 9 ) .  T h e  fail u r e  o f  c u r -rent MAS to signifi  cantly improve polygenic traits has 
+thwarted this prediction. Genomic selection looks to fulfi ll it by using genomewide marker coverage to accu-
+rately estimate breeding values, accelerate the breeding cycle, and introduce greater fl  exibility in the relation-
+ship between phenotypic evaluation and selection. To do so, however, GS must shift from theory to practice. As evident in this review and interpretation, GS has almost exclusively been tested through simulation, and therefore, its potential value should be assessed with cautious opti-mism. The accuracy of GS and its cost eff  ectiveness must 
+now be evaluated in breeding programs to provide the empirical evidence needed to warrant the addition of GS to the plant breeders’ toolbox.
+Acknowledgments
+The authors thank Adam Famoso, Michael Gore, and Jesse 
+Munkvold for their insights and critical reviews. Work of Elliot Heff ner was funded by the USDA National Needs Fellowship 
+Grant 2005-38420-15785. Work of Jean-Luc Jannink was par-tially funded by the USDA-NRI Grant Numbers 2008-55301-18746 and 2006-55606-16722. Additional funding for this research was provided by Hatch 149419.
+References
+Allard, R.W., and A.D. Bradshaw. 1964. Implications of geno-
+type–environmental interactions in applied plant breeding. Crop Sci. 4:503–508.Avendaño, S., J. Woolliams, and B. Villanueva. 2004. Mendelian 
+sampling terms as a selective advantage in optimum breeding schemes with restrictions on the rate of inbreeding. Genet. Res. 83:55–64.
+Beavis, W.D. 1998. QTL analyses: Power, precision, and accuracy. 
+p. 145–162. In A.H. Patterson (ed.) Molecular dissection of complex traits. CRC Press, Boca Raton, FL.
+Bernardo, R. 2001. What if we knew all the genes for a quantita-
+tive trait in hybrid crops? Crop Sci. 41:1–4.
+Bernardo, R., and J. Yu. 2007. Prospects for genomewide selection 
+for quantitative traits in maize. Crop Sci. 47:1082–1090.
+Breiman, L. 1995. Better subset regression using the nonnegative 
+garrote. Technometrics 37:373–384.
+Breseghello, F., and M.E. Sorrells. 2006. Association mapping of 
+kernel size and milling quality in wheat ( Triticum aestivum  L.) 
+cultivars. Genetics 172:1165–1177.
+Broman, K.W., and T.P. Speed. 2002. A model selection approach 
+for the identifi  cation of quantitative trait loci in experimental 
+crosses. J. R. Statist. Soc. Ser. B 64:641–656.
+Calus, M., and R. Veerkamp. 2007. Accuracy of breeding val-
+ues when using and ignoring the polygenic eff  ect in genomic 
+breeding value estimation with a marker density of one SNP per cM. J. Anim. Breed. Genet. 124:362–368.
+Carlborg, O., and C.S. Haley. 2004. Epistasis: Too often neglected 
+in complex trait studies. Nat. Rev. Genet. 5:618–625.
+Chao, S. 2007. Evaluation of genetic diversity and genome-wide 
+linkage disequilibrium among US wheat ( Triticum aestivum  L.) 
+germplasm representing diff  erent market classes. Crop Sci. 
+47:1018–1030.
+Crosbie, T.M., S.R. Eathington, G.R. Johnson, M. Edwards, R. 
+Reiter, S. Stark, et al. 2003. Plant breeding: Past, present, and future. p. 1–50. In K.R. Lamkey and M. Lee (ed.) Plant 
+Breeding: The Arnel R. Hallauer Int. Symp., Mexico City. 17–23 Aug. 2003. Blackwell, Oxford, UK.
+Daetwyler, H.D., B. Villanueva, P. Bijma, and J.A. Woolliams. 
+2007. Inbreeding in genome-wide selection. J. Anim. Breed. Genet. 124:369–376.
+Darvasi, A., and M. Soller. 1992. Selective genotyping for deter-
+mination of linkage between a marker locus and a quantita-tive trait locus. Theor. Appl. Genet. 85:353–359.
+de Roos, A.P., C. Schrooten, E. Mullaart, M.P. Calus, and R.F. 
+Veerkamp. 2007. Breeding value estimation for fat percentage using dense markers on Bos taurus  autosome 14. J. Dairy Sci. 
+90:4821–4829.
+Dekkers, J.C.M. 2007 . Prediction of response to marker-assisted 
+and genomic selection using selection index theory. J. Anim. Breed. Genet. 124:331–341.
+Dekkers, J.C.M., and F. Hospital. 2002. The use of molecular 
+genetics in the improvement of agricultural populations. Nat. Rev. Genet. 3:22–32.
+Eathington, S.R., T.M. Crosbie, M.D. Edwards, R.S. Reiter, and 
+J.K. Bull. 2007. Molecular markers in a commercial breeding program. Crop Sci. 47:S154–S163.
+Edwards, M., and L. Johnson. 1994. RFLP for rapid recurrent 
+selection. p. 33–40. In Analysis of Molecular Marker Data: 
+Joint Plant Breeding Symp. Series. Am. Soc. of Horticultural Sci. and CSSA, Corvallis, OR.
+Falconer, D., and T. Mackay. 1996. Quantitative genetics. Long-
+man, Harrow, UK.
+Fernando, R.L. 2007. Genomic selection. Acta Agric. Scand. Ser. 
+Anim. Sci. 57:192–195.
+CROP SCIENCE , VOL. 49, JANUARY –FEBRUARY  2009  WWW.CROPS .ORG 11Fernando, R., and M. Grossman. 1989. Marker assisted selection 
+using best linear unbiased prediction. Genet. Select. Evol. 21:467–477.
+Frisch, M., and A.E. Melchinger. 2007. Variance of the parental 
+genome contribution to inbred lines derived from biparental crosses. Genetics 176:477–488.
+Gaut, B.S., and A.D. Long. 2003. The lowdown on linkage dis-
+equilibrium. Plant Cell 15:1502–1506.
+Gianola, D., R.L. Fernando, and A. Stella. 2006. Genomic-assisted 
+prediction of genetic value with semiparametric procedures. Genetics 173:1761–1776.
+Gianola, D., and J.B. van Kaam. 2008. Reproducing kernel hilbert 
+spaces regression methods for genomic assisted prediction of quantitative traits. Genetics 178:2289–2303.
+Goddard, M., and B. Hayes. 2007. Genomic selection. J. Anim. 
+Breed. Genet. 124:323–330.
+Gonzalez-Recio, O., D. Gianola, N. Long, K.A. Weigel, G.J.M. 
+Rosa, and S. Avendano. 2008. Nonparametric methods for incorporating genomic information into genetic evaluations: An application to mortality in broilers. Genetics 178:2305–2313.
+Grundy, B., B. Villanueva, and J. Wooliams. 1998. Dynamic selec-
+tion procedures for constrained inbreeding and their conse-quences for pedigree development. Genet. Res. 72:159–168.
+Habier, D., R. Fernando, and J. Dekkers. 2007. The impact of 
+genetic relationship information on genome-assisted breeding values. Genetics 177:2389–2397.
+Hamblin, M.T., M.G. Salas Fernandez, A.M. Casa, S.E. Mitchell, 
+A.H. Paterson, and S. Kresovich. 2005. Equilibrium processes cannot explain high levels of short-and medium-range link-age disequilibrium in the domesticated grass  Sorghum bicolor . 
+Genetics 171:1247–1256.
+Hayes, B. 2007. QTL mapping, MAS, and genomic selection. 
+Available at http:/ /www.ans.iastate.edu/section/abg/short-course/notes.pdf (verifi  ed 4 Nov. 2008). Animal Breeding & 
+Genetics, Dep. of Animal Science, Iowa State Univ., Ames.
+Hazel, L. 1943. The genetic basis for constructing selection indexes. 
+Genetics 28:476–490.
+Hazel, L., and J.L. Lush. 1942. The effi   ciency of three methods of 
+selection. J. Hered. 33:393–399.
+Heckenberger, M., H.P. Maurer, A.E. Melchinger, and M. Frisch. 
+2008. The plabsoft database: A comprehensive database man-agement system for integrating phenotypic and genomic data in academic and commercial plant breeding programs. Euphytica 161:173–179.
+Henderson, C. 1984. Application of linear models in animal breed-
+ing. Univ. of Guelph, Ontario.
+Hill, W.G., M.E. Goddard, P.M. Visscher, and T.F.C. Mackay. 
+2008. Data and theory point to mainly additive genetic vari-ance for complex traits. PLoS Genet. 4:e1000008.
+Holland, J.B. 2001. Epistasis and plant breeding. Plant Breed. Rev. 
+21:27–92.
+Holland, J.B. 2004. Implementation of molecular markers for 
+q u a n t i t a t i v e  t r a i t s  i n  b r e e d i n g  p r o g r a m s :  C h a l l e n g e s  a n d  opportunities. p. 26. In T. Fischer et al. (ed.) New Directions 
+for a Diverse Planet: Proc. for the 4th Int. Crop Science Con-gress, Brisbane, Australia. 26 Sept.–1 Oct. 2004. Regional Institute, Gosford, Australia.
+Holland, J.B. 2007. Genetic architecture of complex traits in 
+plants. Curr. Opin. Plant Biol. 10:156–161.
+Hospital, F., L. Moreau, F. Lacoudre, A. Charcosset, and A. Gal-
+lais. 1997. More on the effi   ciency of marker-assisted selection. 
+Theor. Appl. Genet. 95:1181–1189.Jannink, J.-L., M.C. Bink, and R.C. Jansen. 2001. Using complex 
+plant pedigrees to map valuable genes. Trends Plant Sci. 6:337.
+Kearsey, M., and A. Farquhar. 1998. QTL analysis in plants: Where 
+are we now? Heredity 80:137–142.
+Knapp, S., and W. Bridges. 1990. Using molecular markers to estimate 
+quantitative trait locus parameters: Power and genetic variances for unreplicated and replicated progeny. Genetics 126:769–777.
+Koebner, R.M.D., and R.W. Summers. 2003. 21st century wheat 
+breeding: Plot selection or plate detection? Trends Biotech-nol. 21:59–63.
+Lande, R., and R. Thompson. 1990. Effi   ciency of marker-assisted 
+selection in the improvement of quantitative traits. Genetics 124:743–756.
+Lander, E., and D. Botstein. 1989. Mapping Mendelian factors 
+underlying quantitative traits using RFLP linkage maps. Genetics 121:185–199.
+Lange, C., and J.C. Whittaker. 2001. On prediction of genetic val-
+ues in marker-assisted selection. Genetics 159:1375–1381.
+Lee, M. 1995. DNA markers and plant breeding programs. Adv. 
+Agron. 55:265–344.
+Lynch, M., and B. Walsh. 1998. Genetics and analysis of quantita-
+tive traits. Sinauer, Sunderland, MA.
+Maccaferri, M., M.C. Sanguineti, E. Noli, and R. Tuberosa. 2005. 
+Population structure and long-range linkage disequilibrium in a durum wheat elite collection. Mol. Breed. 15:271–290.
+Mackay, T.F.C. 2008. The genetic architecture of complex behav-
+iors: Lessons from Drosophila. Genetica doi:10.1007/s10709-008-9310-6.
+Mather, K.A., A.L. Caicedo, N.R. Polato, K.M. Olsen, S. 
+McCouch, and M.D. Purugganan. 2007. The extent of linkage disequilibrium in rice ( Oryza sativa  L.). Genetics 
+177:2223–2232.
+Meuwissen, T. 1997. Maximizing the response of selection with a 
+predefi  ned rate of inbreeding. J. Anim. Sci. 75:934–940.
+Meuwissen, T.H.E., and M.E. Goddard. 1996. Marker-assisted 
+se l ecti o n  in  animal  b reeding  sc h em es.  p .  1 60 .  In Proc. Int. 
+Soc. Anim. Genet., Tours, France. 21–25 July 1996.
+Meuwissen, T.H.E., and M.E. Goddard. 2004. Mapping multiple 
+QTL using linkage disequilibrium and linkage analysis infor-mation and multitrait data. Genet. Sel. Evol. 36:261–279.
+Meuwissen, T.H.E., B.J. Hayes, and M.E. Goddard. 2001. Predic-
+tion of total genetic value using genome-wide dense marker maps. Genetics 157:1819–1829.
+Moreau, L., A. Charcosset, and A. Gallais. 2004. Experimental 
+evaluation of several cycles of marker-assisted selection in maize. Euphytica 137:111–118.
+Moreau, L., A. Charcosset, F. Hospital, and A. Gallais. 1998. 
+Marker-assisted selection effi   ciency in populations of fi  nite 
+size. Genetics 148:1353–1365.
+Muir, W.M. 2007. Comparison of genomic and traditional BLUP-
+estimated breeding value accuracy and selection response under alternative trait and genomic parameters. J. Anim. Breed. Genet. 124:342–355.
+Neimann-Sorensen, A., and A. Robertson. 1961. The association 
+between blood groups and several production characteristics in three Danish cattle breeds. Acta Agric. Scand. 11:163–196.
+Piepho, H.P., J. Möhring, A.E. Melchinger, and A. Büchse. 2007. 
+BLUP for phenotypic selection in plant breeding and variety testing. Euphytica 161:209–228.
+Piyasatian, N., R.L. Fernando, and J.C. Dekkers. 2007. Genomic 
+selection for marker-assisted improvement in line crosses. Theor. Appl. Genet. 115:665–674.
+12 WWW.CROPS .ORG CROP SCIENCE , VOL. 49, JANUARY –FEBRUARY  2009Quinton, M., C. Smith, and M. Goddard. 1992. Comparison of 
+selection methods at the same level of inbreeding. J. Anim. Sci. 70:1060–1067.
+R a f a l s k i ,  A .  2 0 0 2 .  A p p l i c a t i o n s  o f  s i n g l e  n u c l e o t i d e  p o l y m o r -
+phisms in crop genetics. Curr. Opin. Plant Biol. 5:94–100.
+Remington, D.L., J.M. Thornsberry, Y. Matsuoka, L.M. Wilson, 
+S.R. Whitt, J. Doebley, S. Kresovich, M.M. Goodman, and E.S. Buckler, IV. 2001. Structure of linkage disequilibrium and phenotypic associations in the maize genome. Proc. Natl. Acad. Sci. USA 98:11479–11484.
+Schaeff  er, L.R. 2006. Strategy for applying genome-wide selec-
+tion in dairy cattle. J. Anim. Breed. Genet. 123:218–223.
+Schön, C., S. Utz, B. Groh, S. Truberg, S. Openshaw, and A. 
+Melchinger. 2004. QTL mapping based on resampling in a vast maize testcross experiment confi  rms the infi  nitesimal 
+model of quantitative genetics for complex traits. Genetics 167:485–498.
+Smith, C. 1967. Improvement of metric traits through specifi  c 
+genetic loci. Anim. Prod. 9:349–358.
+Stranger, B.E., M.S. Forrest, M. Dunning, C.E. Ingle, C. Beazley, 
+N. Thorne, R. Redon, C.P. Bird, A. de Grassi, and C. Lee. 2007. Relative impact of nucleotide and copy number varia-tion on gene expression phenotypes. Science 315:848–853.
+Stuber, C., M. Goodman, and R. Moll. 1982. Improvement of 
+yield and ear number resulting from selection at allozyme loci in a maize population. Crop Sci. 22:737–740.
+Tanksley, S., N. Young, A. Paterson, and M. Bonierbale. 1989. 
+RFLP mapping in plant breeding: New tools for an old sci-ence. Biotechnology (N. Y.) 7:257–264.
+Tenaillon, M.I., M.C. Sawkins, A.D. Long, R.L. Gaut, J.F. Doeb-
+ley, and B.S. Gaut. 2001. Patterns of DNA sequence polymor-phism along chromosome 1 of maize ( Zea mays  ssp. mays L.). 
+Proc. Natl. Acad. Sci. USA 98:9161–9166.
+ter Braak, C.J.F., M.P. Boer, and M.C.A.M. Bink. 2005. Extend-
+ing Xu’s Bayesian model for estimating polygenic eff  ects using 
+markers of the entire genome. Genetics 170:1435–1438.
+Tinker, N., and W. Yan. 2006. Information systems for crop per-
+formance data. Can. J. Plant Sci. 86:647–662.
+van Arendonk, J., B. Tier, and B. Kinghorn. 1994. Use of multiple 
+genetic markers in prediction of breeding values. Genetics 137:319–329.Villanueva, B., R. Pong-Wong, J. Fernandez, and M. Toro. 2005. 
+Benefi  ts from marker-assisted selection under an additive 
+polygenic genetic model. J. Anim. Sci. 83:1747–1752.
+Whittaker, J.C., R. Thompson, and M.C. Denham. 2000. 
+Marker-assisted selection using ridge regression. Genet. Res. 75:249–252.
+Wong, C.K., and R. Bernardo. 2008. Genomewide selection in 
+oil palm: Increasing selection gain per unit time and cost with small populations. Theor. Appl. Genet. 116:815–824.
+Woolliams, J., P. Bijma, and B. Villanueva. 1999. Expected genetic 
+contributions and their impact on gene fl  ow and genetic gain. 
+Genetics 153:1009–1020.
+Wray, N.R., and R. Thompson. 1990. Prediction of rates of 
+inbreeding in selected populations. Genet. Res. 55:41–54.
+Xu, S. 2003a. Theoretical basis of the Beavis eff  ect. Genetics 
+165:2259–2268.
+Xu, S. 2003b. Estimating polygenic eff  ects using markers of the 
+entire genome. Genetics 163:789–801.
+Xu, Y., and J.H. Crouch. 2008. Marker-assisted selection in plant 
+breeding: From publications to practice. Crop Sci. 48:391–407.
+Yan, W., and N.A. Tinker. 2007. DUDE: A user-friendly crop 
+information system. Agron. J. 99:1029–1033.
+Yu, J., G. Pressoir, W.H. Briggs, I.V. Bi, M. Yamasaki, J.F. Doeb-
+ley, M.D. McMullen, B.S. Gaut, D.M. Nielsen, and J.B. Hol-land. 2006. A unifi  ed mixed-model method for association 
+mapping that accounts for multiple levels of relatedness. Nat. Genet. 38:203–208.
+Zhang, W ., H.R. Lee, D.H. Koo, and J. Jiang. 2008. Epigenetic 
+modifi  cation of centromeric chromatin: Hypomethylation of 
+DNA sequences in the CENH3-associated chromatin in ara-bidopsis thaliana and maize. Plant Cell 20:25–34.
+Zhao, K., M.J. Aranzana, S. Kim, C. Lister, C. Shindo, C. Tang, C. 
+Toomajian, H. Zheng, C. Dean, and P. Marjoram. 2007. An Arabidopsis  example of association mapping in structured sam-
+ples. PLoS Genet. 3:e4, doi:10.1371/journal.pgen.0030004.
+Zhong, S., and J.L. Jannink. 2007. Using quantitative trait loci 
+results to discriminate among crosses on the basis of their progeny mean and variance. Genetics 177:567–576.
+Zhu, C., M. Gore, E.S. Buckler, and J. Yu. 2008. Status and pros-
+pects of association mapping in plants. Plant Genome 1:5–20.
+View publication stats

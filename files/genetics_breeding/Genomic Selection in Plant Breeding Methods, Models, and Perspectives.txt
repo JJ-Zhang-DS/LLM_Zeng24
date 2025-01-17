@@ -1,0 +1,1015 @@
+Feature  Review
+Genomic  Selection  in  Plant
+Breeding:  Methods,  Models,
+and  Perspectives
+José  Crossa,1,*Paulino  Pérez-Rodríguez,2Jaime  Cuevas,3
+Osval  Montesinos-López,4Diego  Jarquín,5
+Gustavo  de  los  Campos,6Juan  Burgueño,1
+Juan  M.  González-Camacho,2Sergio  Pérez-Elizalde,2
+Yoseph  Beyene,1Susanne  Dreisigacker,1Ravi  Singh,1
+Xuecai  Zhang,1Manje  Gowda,1Manish  Roorkiwal,7
+Jessica  Rutkoski,8and  Rajeev  K.  Varshney7,*
+Genomic  selection  (GS)  facilitates  the  rapid  selection  of  superior  genotypes
+and  accelerates  the  breeding  cycle.  In  this  review,  we  discuss  the  history,
+principles,  and  basis  of  GS  and  genomic-enabled  prediction  (GP)  as  well  as  the
+genetics  and  statistical  complexities  of  GP  models,  including  genomic  geno-
+type  /C2  environment  (G  /C2  E)  interactions.  We  also  examine  the  accuracy  of  GP
+models  and  methods  for  two  cereal  crops  and  two  legume  crops  based  on
+random  cross-validation.  GS  applied  to  maize  breeding  has  shown  tangible
+genetic  gains.  Based  on  GP  results,  we  speculate  how  GS  in  germplasm
+enhancement  (i.e.,  prebreeding)  programs  could  accelerate  the  ﬂow  of  genes
+from  gene  bank  accessions  to  elite  lines.  Recent  advances  in  hyperspectral
+image  technology  could  be  combined  with  GS  and  pedigree-assisted  breeding.
+The  Role  of  Genomic-Enabled  Prediction  in  Plant  Breeding
+Beginning  during  the  1980s,  the  development  of  different  molecular  marker  systems  drastically
+increased  the  total  number  of  polymorphic  markers  available  to  plant  breeders,  and  to
+molecular  biologists  in  general.  The  most  notable  high-throughput  genotyping  (HTG)  system
+is  single  nucleotide  polymorphisms  (SNPs),  which  have  been  used  intensively  in  quantitative
+trait  locus  (QTL;  see  Glossary )  discovery.  More  than  10  000  QTLs  using  different  marker
+systems  have  been  reported  in  more  than  120  studies  covering  12  plant  species  [1]  that  aimed
+to  improve  quantitative  traits  of  economic  importance.  Initially,  molecular  markers  were  inte-
+grated  in  traditional  phenotypic  selection  (PS)  by  applying  marker-assisted  selection  (MAS).
+For  simple  traits,  MAS  comprises  selecting  individuals  with  QTL-associated  markers  that  have
+major  effects;  markers  not  signi ﬁcantly  associated  with  a  trait  are  not  used.  However,  attempts
+to  improve  complex  quantitative  traits  by  using  QTL-associated  marker  detection  have  been
+unsuccessful  due  to  the  difﬁculty  of  ﬁnding  the  same  QTL  across  multiple  environments  (due  to
+QTL  /C2  environment  interactions)  or  in  different  genetic  backgrounds  [2].
+Linkage  analysis  for  QTL  mapping  is  done  on  biparental  populations,  but  has  low  power  for
+detecting  marker –trait  association  due  to  chromosomes  with  low  recombination  rates.  There-
+fore,  association  mapping  started  during  the  early  2000s  with  the  objective  of  overcoming  the
+low  power  of  linkage  analysis,  thus  facilitating  the  detection  of  marker –trait  associations  inTrends
+In  recent  years,  the  global  climate  has
+changed,  resulting  in  drastic  ﬂuctua-
+tions  in  rainfall  patterns  and  increasing
+temperature.  Sudden  climate  changes
+can  cause  signi ﬁcant  economic  losses
+to  countries  worldwide.
+Genetic  improvement  of  several  eco-
+nomically  important  crops  during  the
+20th  century  using  phenotypic,  pedi-
+gree,  and  performance  data  was  very
+successful.  However,  signs  of  grain
+yield  stagnation  in  some  crops,  espe-
+cially  in  drought-stressed  and  semi-
+arid  regions,  are  evident.
+Genomic  selection  offers  the  opportu-
+nity  to  increase  grain  production  in  less
+time.  International  Maize  and  Wheat
+Improvement  Center  (CIMMYT)  maize
+breeding  research  in  Sub-Saharan
+Africa,  India,  and  Mexico  has  shown
+that  genomic  selection  can  reduce  the
+breeding  interval  cycle  to  at  least  half
+the  conventional  time  and  produces
+lines  that,  in  hybrid  combinations,  sig-
+niﬁcantly  increase  grain  yield  perfor-
+mance  over  that  of  commercial
+checks.
+Public  and  private  investment  in  crop
+genomic  selection  research  should
+increase  to  successfully  develop  in  less
+time  germplasm  that  is  adapted  to
+sudden  climate  change.
+Trends  in  Plant  Science,  November  2017,  Vol.  22,  No.  11  http://dx.doi.org/10.1016/j.tplants.2017.08.011  961
+©  2017  Elsevier  Ltd.  All  rights  reserved.
+nonbiparental  populations  and  ﬁne-mapping  chromosome  segments  with  high  recombination
+rates.  However,  the  main  problem  of  ﬁne-association  mapping  is  the  low  power  for  detecting
+rare  variants  that  may  be  associated  with  economically  important  traits  [2].  Thus,  the  challenge
+of  association  mapping  and  QTL  detection  resides  in  identifying  and  quantifying  rare  QTLs  with
+small  effects  for  economically  important  traits  that  are  highly  affected  by  the  environment.
+However,  because  the  cost  of  SNP  assays  has  dramatically  decreased,  the  possibility  of  using
+high-density  SNP  arrays  (tens  of  thousands)  has  resulted  in  the  development  of  statistical
+models  to  predict  marker –trait  association  accurately,  depending  on  the  genetic  architecture  of
+the  predicted  trait.
+Contrary  to  QTL  and  association  mapping,  GS  uses  all  molecular  markers  for  GP  of  the
+performance  of  the  candidates  for  selection.  Therefore,  the  aim  of  GS  is  to  predict  breeding
+and/or  genetic  values.  GS  combines  molecular  and  phenotypic  data  in  a  training  population
+(TRN)  to  obtain  the  genomic  estimated  breeding  values  (GEBVs ’)  of  individuals  in  a  testing
+population  (TST)  that  have  been  genotyped  but  not  phenotyped  [3].  Figure  1A  depicts  the  two
+basic  populations  in  a  GS  program:  the  TRN  data,  whose  phenotype  and  genotype  are  known,
+and  the  TST  data,  whose  genetic  values  are  to  be  predicted.  GS  is  used  in  place  of  phenotyping
+for  a  few  selection  cycles.  The  main  advantages  of  GS  over  phenotype-based  selection  in
+breeding  are  that  it  reduces  the  cost  per  cycle  and  the  time  required  for  variety  development.  In
+terms  of  cost  reduction  in  maize  breeding,  the  breeder  can  testcross  50%  of  all  available  lines,
+evaluating  them  in  ﬁrst-stage  multi-locational  trials,  and  can  then  use  the  phenotypic  data  to
+predict  the  remaining  50%  by  GS.  Figure  1B  shows  the  advantage  of  GS  over  PS  for:  (i)
+reducing  costs,  up  to  50%;  and  (ii)  saving  time  by  selecting  lines  directly  for  stage  II  instead
+going  through  stage  I  (used  in  PS).  This  signi ﬁcantly  reduces  the  cost  of  testcross  formation  and
+evaluation  at  each  stage  of  multi-location  evaluations.  The  time  efﬁciency  over  PS  could  come
+from  the  second  cycle  of  selection,  which  uses  the  TRN  from  the  previous  cycle  to  predict  the
+new  doubled  haploid  (DH)  lines,  thus  excluding  testcross  formation  and  ﬁrst-stage  multi-
+location  evaluation  trials.  Based  on  GS,  the  best  lines  could  go  directly  to  the  second  stage
+of  multi-location  evaluations.
+GS  predicts  the  breeding  values  (BVs)  of  the  candidates  for  selection.  BVs  have  two  compo-
+nents:  the  parental  average  (the  mean  BV  of  both  parents)  and  the  deviation  of  progeny
+performance  from  this  average  that  is  due  to  Mendelian  sampling.  In  conventional  breeding,  the
+parental  average  is  quanti ﬁed  by  pedigree  information  (if  the  genealogy  is  available),  from  which
+a  relationship  matrix  A  between  the  individuals  can  be  derived.  Mendelian  sampling  assesses
+within-family  variation  that  is  quanti ﬁed  by  testing  the  progeny  in  multienvironment  ﬁeld  trials.
+GS  takes  advantage  of  dense  markers  to  quantify  Mendelian  sampling,  thus  avoiding  the  need
+to  extensively  phenotype  the  progeny.  This  saves  time  by  reducing  the  cycle  length,  while
+enhancing  the  expected  genetic  gain  and  the  selection  response  per  unit  time;  it  also  uses
+less  resources  compared  with  extensive  phenotyping.  GS  has  the  potential  to  quickly  improve
+complex  traits  with  low  heritability  as  well  as  to  signi ﬁcantly  reduce  the  cost  of  line  and  hybrid
+development.  GS  can  also  be  used  for  simple  traits  with  higher  heritability  than  complex  traits,
+for  which  high  GP  accuracy  is  expected.  The  application  of  GS  in  plant  breeding  could  be
+limited  by  two  main  factors:  (i)  genotyping  costs;  and  (ii)  unclear  guidelines  as  to  where  GS  can
+be  efﬁciently  applied  in  a  breeding  program.
+GS  and  GP  have  been  applied  using  two  different  approaches.  One  focuses  on  predicting
+additive  effects  in  early  generations  of  a  breeding  program  (F2:3)  to  achieve  a  rapid  selection
+cycle  with  a  short  interval  (i.e.,  GS  at  the  F2level  of  a  biparental  cross).  In  this  case,  researchers
+are  interested  in  predicting  the  additive  values  (BVs)  rather  than  the  total  genetic  value;
+therefore,  additive  linear  models  that  summarize  the  effects  of  the  markers  are  sufﬁcient.
+The  other  approach  predicts  the  complete  genetic  values  of  individuals  considering  both1International  Maize  and  Wheat
+Improvement  Center  (CIMMYT),  Apdo.
+Postal  6-641,  06600,  Mexico  City,
+Mexico
+2Colegio  de  Postgraduados,
+Montecillo,  Texcoco,  56230,  Edo.  de
+Mexico,  Mexico
+3Universidad  de  Quintana  Roo,
+Quintana  Roo,  77019,  Mexico
+4Facultad  de  Telemática,  Universidad
+de  Colima,  Colima,  28040,  Mexico
+5Department  of  Agronomy  and
+Horticulture,  University  of  Nebraska-
+Lincoln,  321  Keim  Hall,  Lincoln,  NE
+68503-0915,  USA
+6Department  of  Epidemiology  &
+Biostatistics,  Michigan  State
+University,  909  Fee  Road,  Room
+B601,  East  Lansing,  MI  48824,  USA
+7International  Crops  Research  Institute
+for  the  Semi-Arid  Tropics  (ICRISAT),
+Patancheru  502  324,  Telangana,  India
+8International  Rice  Research  Institute,
+Los  Baños,  4030,  Philippines
+*Correspondence:
+j.crossa@cgiar.org  (J.  Crossa)  and
+R.K.Varshney@cgiar.org(R.K. Varshney).
+962  Trends  in  Plant  Science,  November  2017,  Vol.  22,  No.  11
+Glossary
+Breeding  value  (BV):  the  worth  of
+an  individual  as  estimated  by  the
+average  performance  of  its
+progenies.Array: high-throughput  genotyping
+platform  containing  either  genome-
+wide  SNPs  (SNP  array)  or  coding
+variants  (exome  array).
+Genetic  gain:  the  amount  of
+increase  in  performance  that  is
+achieved  through  genetic
+improvement  programs  between
+consecutive  selection  cycles.
+Genomic  estimated  breeding
+value  (GEBV):  breeding  value  of  an
+individual  calculated  using  genome-
+wide  marker  data  to  capture  small
+genetic  effects  dispersed  over  the
+genome.Genomic selection  (GS):  a  type  of
+breeding  methodology  that  selects
+the  best  candidates  as  parents  for
+the  next  selection  cycle  based  on
+their  predicted  breeding  values
+computed  given:  (i)  their  genotypes;
+and  (ii)  the  phenotypes  and
+genotypes  of  their  relatives.
+Genotyping-by-sequencing  (GBS):
+a  highly  multiplex  genotyping  system
+that  involves  DNA  digestion  with
+enzymes  followed  by  construction  of
+a  reduced  representation  library,
+which  is  sequenced  using  a  next-
+generation  sequencing  platform.
+Heterotic  group:  a  group  of
+genotypes,  irrespective  of  their
+genetic  relatedness,  that  display
+similar  combining  ability  and  heterotic
+response  when  crossed  with
+genotypes  from  other  genetically
+distinct  germplasm  of  the  same
+group.Linkage disequilibrium  (LD):  the
+nonrandom  associations  of  alleles  at
+two  loci  that  can  occur  even  if  the
+two  genes  are  unlinked.
+Marker-assisted  selection  (MAS):
+a  process  for  selecting  individuals
+based  on  trait-linked  markers.
+Marker-assisted  recurrent
+selection  (MARS):  a  type  of  MAS
+that  allows  the  simultaneous
+identi ﬁcation  of  associated  alleles  as
+well  as  the  accumulation  of  superior
+alleles  from  both  parents.
+Quantitative  trait  locus  (QTL):  a
+gene  (DNA  section  also  called  locus)
+that  is  associated  with  variation  in  a
+phenotype.
+(A)
+Phenotype
+TRN
+popula/g415on
+TST
+popula/g415onGenotype
+with genome-
+wide markersDevelop a
+predic/g415on
+equa/g415on
+Predict breeding
+values for
+individuals in TSTGenotype
+with genome-
+wide markersTRN and TST popula/g415ons in genomic selec/g415on
+(B)
+Phenotypic selec/g415on Phenotypic + genomic selec/g415on Year
+1
+1
+2
+2
+3
+3
+4
+4
+5
+5
+6
+6
+BBBBBB
+AAAAAA A x B A x B
+F1 - inducer F1 - inducer
+Haploids Haploids
+Haploids HaploidsDH per se – seed increase
+DH per se – seed increaseDH per se – seed increase + genotyping
+DH per se – seed
+increase + genotypingDH for TCs – stage I
+DH for TCs – stage I DH for TCs – stage II GS modelGS model50% in cold room 50% DH for TCs – stage I
+First stage mul/g415loca/g415on
+evalua/g415on of TCsFirst stage mul/g415loca/g415on
+evalua/g415on of TCs
+First-stage mul/g415loca/g415on
+evalua/g415on of TCsSecond-stage mul/g415loca/g415on 
+evalua/g415on of TCsLine C x line D Line C x line D
+F1 - inducer F1 - inducerSeason
+Figure  1.  Populations  Used  in  Genomic  Selection  and  a  Scheme  of  Phenotypic  and  Genomic  Selection  in
+Maize  Breeding.  (A)  Genomic  selection  (GS)  requires  a  training  population  (TRN)  that  has  been  genotyped  and
+phenotyped  and  a  testing  population  (TST)  that  has  only  been  genotyped  but  not  phenotyped.  (B)  Reduction  of  cycle
+length  through  GS  in  maize  using  doubled  haploids  (DH)  crossed  with  a  tester  (TC).
+Trends  in  Plant  Science,  November  2017,  Vol.  22,  No.  11  963
+additive  and  nonadditive  (dominance  and  epistasis)  effects,  thereby  estimating  the  perfor-
+mance  (commercial  value)  of  the  cultivars.  Genetic  values  of  lines  are  predicted  for  some
+environments  using  an  incomplete  (sparse)  multienvironment  testing  scheme.
+Several  genetic  and  statistical  factors  complicate  the  practical  application  of  GP.  Genetic
+difﬁculties  arise  from  the  size  and  diversity  of  the  TRN  population  and  the  heritability  of  the  traits
+to  be  predicted.  Statistical  challenges  are  related  to  the  high  dimensionality  of  marker  data,
+where  the  number  of  markers  (p)  is  much  larger  than  the  number  of  observations  (n)  (p>>n)  and
+the  multicolinearity  among  markers  (adjacent  markers  are  highly  correlated).  For  more  details,
+see  ‘The  complexity  of  genomic  selection  and  prediction ’  and  ‘Solution  to  an  inverse  problem ’
+in  the  supplementary  information  online.
+Here,  we  review  advances  in  GS  and  GP  theory  in  light  of  the  above  considerations  and
+evaluate  recent  examples  from  GP  applied  to  cereal  and  legume  breeding  programs.  We
+describe  the  evolution  and  main  features  of  GP  models,  including  complexities,  strengths,  and
+weaknesses.  We  then  illustrate  the  use  of  GP  using  examples  from  crop  breeding  programs
+with  genomic  G  /C2  E  interactions ,  as  well  as  results  of  genetic  gains  from  rapid  cycle  GS  in
+maize.  We  also  speculate  on  the  prospects  for  GS  and  GP  in  plant  breeding.  Most  of  the  results
+presented  in  this  review  include  studies  performed  on  maize  and  wheat  from  the  International
+Maize  and  Wheat  Improvement  Center  (CIMMYT),  as  well  as  on  chickpea  from  the  International
+Crops  Research  Institute  for  the  Semi-Arid  Tropics  (ICRISAT)
+Genomic-Enabled  Prediction  Models  and  Applications:  Coping  with
+Complexity
+The  complexity  of  applying  GP  in  breeding  occurs  at  different  levels  and  is  inﬂuenced  by  several
+factors.  When  a  trait  is  affected  by  a  large  number  of  loci,  GP  accuracy  depends  on  several
+genetic  factors:  (i)  the  size  and  genetic  diversity  of  the  TRN  population  and  its  relationship  with
+the  TST  population  [4];  that  is,  whether  the  cultivars  in  the  TRN  are  relatives  (close  and/or
+distant)  of  cultivars  in  the  TST  set;  (ii)  the  heritability  of  the  trait(s)  under  selection  [complex  traits
+with  low  heritability  and  small  marker  effects  are  suitable  for  GS  and  GP,  whereas  less  complex
+traits  (with  high  heritability)  can  be  predicted  by  a  few  markers  with  relatively  large  effects);  and
+(iii)  for  complex  traits  with  large  numbers  of  markers  that  are  not  in  linkage  disequilibrium  (LD)
+with  the  QTL,  GP  accuracy  is  lower  [5]  and  increases  when  the  heritability  and  TRN  size
+increase.  Studies  have  shown  the  importance  of  selecting  an  appropriate  TRN  population  that
+optimizes  the  accuracy  of  the  predictions  of  the  nonphenotyped  cultivars  in  the  TST  set  [6].
+Depending  on  the  trait,  the  increase  in  GP  accuracy  reaches  a  plateau  as  the  population  size
+increases.  A  similar  trend  was  found  for  the  number  of  markers  [7,8].
+One  important  genetic-statistical  complexity  of  GP  models  arises  when  predicting  nonphe-
+notyped  individuals  in  speci ﬁc  environments  (site –year  combinations)  by  incorporating  G  /C2  E
+interactions  into  the  statistical  models.  Equally  important  is  the  genomic  complexity  related  to
+G  /C2  E  interactions  for  multi-traits;  these  interactions  create  trait  and  environmental  structures
+that  should  be  dealt  with  by  using  statistical-genetic  models  that  exploit  multi-trait,  multi-
+environment  variance-covariance  and  genetic  correlations  between  environments,  between
+traits,  and  between  traits  and  environments,  simultaneously.  Untangling  the  complexity  of
+multi-trait  genomics  and  multiple  environments  requires  a  theoretical  framework  that  accounts
+for  these  complex  interactions  [9]  (see  ‘Bayesian  multi-trait  multienvironment  genomic  model
+for  normal  phenotypes ’  in  the  supplementary  information  online).  Interestingly,  the  use  of  GP  to
+improve  disease  resistance  has  been  challenging  in  wheat  for  two  reasons:  (i)  selection  for
+major  resistance  genes  can  be  ephemeral  due  to  changes  in  pathogen  races;  and  (ii)  breeding
+for  minor  resistance  genes  with  small  effects  throughout  GS  (which  provides  durable  resis-
+tance)  may  face  the  usual  complexities  encountered  in  GS  [10].
+964  Trends  in  Plant  Science,  November  2017,  Vol.  22,  No.  11
+Another  level  of  complexity  occurs  in  GS  statistical  prediction  models  because  the  number  of
+markers  (p)  is  larger  than  the  population  size  (n)  and  the  predictors  (markers)  are  highly
+correlated.  This  situation  results  in  a  matrix  of  predictors  that  is  rank  deﬁcient,  making  it
+impossible  to  compute  least-square  estimates  for  marker  effects.  The  complexity  arises  from
+factors  such  as  the  course  of  dimensionality  [11];  that  is,  under  models  with  p>>n,  which  are
+not  likelihood  identi ﬁed  and  are  prone  to  over ﬁtting,  spurious  features  and  data  structures  may
+be  captured  (see  ‘The  complexity  of  genomic  selection  and  prediction ’  and  ‘Solution  to  an
+inverse  problem ’  in  the  supplementary  information  online).  Solutions  to  these  problems  include
+the  use  of:  (i)  penalized  regression;  (ii)  variable  selection;  and  (iii)  dimensionality  reduction  (e.g.,
+principal  components),  such  that  a  new  set  of  predictors  that  are  not  correlated  is  generated
+from  the  original  one  (markers),  thus  allowing  the  use  of  univariate  distributions  and  decreasing
+the  computation  time  of  the  estimates  and  the  prediction  [12].  A  fourth  solution  is  to  use
+statistical  models  that  assess  GP  complexities  and  high-density  marker  platforms  with  G  /C2  E
+interactions,  thereby  adding  power  to  the  GP  models  (see  the  next  section).
+GP  models  based  on  basic  quantitative  genetics  describe  the  phenotypic  response  as  the  sum
+of  a  genetic  value  (linear  additive  models)  and  a  residual  value.  A  large  body  of  GP  research  has
+focused  on  developing  efﬁcient  parametric  and  nonparametric  statistical  and  computational
+models  with  increased  accuracy  for  predicting  nonphenotyped  genotypes  [13].  In  general,
+these  theoretical  studies  show  reasonably  good  prediction  accuracies  for  complex  traits  such
+as  grain  yield  and  other  traits  evaluated  by  means  of  independent  random  cross-validation  data
+partitioning.  In  contrast  to  the  widespread  use  of  GP  to  predict  the  performance  of  one  trait  in
+the  TST  populations  using  data  from  the  same  trait  observed  in  the  TRN  populations,  the
+complexity  of  extending  this  to  multi-trait  GP  indices  has  not  received  much  attention,  except
+for  a  method  proposed  by  Cerón-Rojas  et  al.  [14]  that  is  based  on  the  multi-trait  Genomic  Best
+Linear  Unbiased  Estimator  (GBLUP)  selection  index,  which  worked  well  when  applied  to
+simulated  and  real  data  sets.
+With  advances  in  GS  and  GP,  data  volumes  and  complexity  have  increased  dramatically,
+leading  to  novel  interdisciplinary  research  efforts  to  integrate  computer  science,  machine
+learning,  mathematics,  physics,  statistics,  genetics  and  quantitative  genetics,  and  bioinfor-
+matics.  Such  work  has  emerged  as  a  new  ﬁeld  of  research  (commonly  known  as  ‘data  science ’
+or  data-driven  science)  that  aims  to  unify  statistics  with  data  analysis,  data  mining,  and  so  on.
+The  interdisciplinary  researchers  in  data  science  focus  on  computing  more  accurate  predictive
+values  by  using  statistical  models  or  machine-learning  models  (R.  McDowell,  MSc  thesis,  Iowa
+State  University,  2016).  Neural  network  methods  are  common  prediction  tools  in  machine
+learning.  Neural  networks  comprise  layers  of  interconnected  neurons,  where  the  output  of  each
+neuron  is  expressed  as  the  sum  of  a  certain  number  of  inputs  to  a  neuron  located  in  a  speci ﬁc
+network  layer,  with  a  weight  plus  a  bias;  the  sum  of  all  inputs  is  weighted  by  an  activation
+function.
+When  neural  networks  are  applied  to  GP,  the  input  layer  is  each  marker  with  one  neuron  per
+marker;  each  of  the  neurons  (markers)  in  the  input  layer  is  connected  to  all  the  neurons  in  the
+ﬁrst  hidden  layer,  and  these  are  connected  to  all  neurons  in  the  second  hidden  layer,  and  so  on,
+up  to  the  output  layer,  which  is  one  hidden  neuron  layer  with  the  prediction  of  each  of  the
+phenotypes.  Recent  developments  in  neural  networks  and  speedier  computer  processing  have
+allowed  the  addition  of  new  layers  to  the  neural  network  (deep  machine  learning)  to  capture
+small  cryptic  correlations  between  inputs  [15],  which  in  GP  are  interactions  between  markers.
+Initial  applications  of  machine-learning  and  neural  networks  in  GP  were  demonstrated  by
+Gianola  et  al.  [16,17] ,  González-Camacho  et  al.  [18,19] ,  Pérez-Rodríguez  et  al.  [20],  Ornella
+et  al.,  [21],  and  González-Recio  et  al.  [22].  Recent  results  for  deep  machine  learning  applied  to
+GP  can  be  found  elsewhere  (R.  McDowell,  MSc  thesis,  Iowa  State  University,  2016).
+Trends  in  Plant  Science,  November  2017,  Vol.  22,  No.  11  965
+The  Accuracy  of  GP  Models,  and  Genetic  Gains  Achieved  by  GS
+The  GP  models  assess  different  prediction  problems  that  attempt  to  mimic  what  happens  when
+predictions  are  made  in  real  situations.  Different  random  cross-validation  schemes  have  been
+designed  to  simulate  the  prediction  problems  that  researchers  may  face  when  performing  GS.
+There  are  four  basic  scenarios  arising  from  combinations  of  tested  (observed)  lines  (LT),
+untested  (unobserved)  lines  (LU)  with  tested  (observed)  environment  (ET),  or  untested  (unob-
+served)  environments  (EU).  Predicting  newly  developed  lines  (or  cultivars)  in  environments
+where  they  were  not  tested  is  a  case  of  LU-ET  (random  cross-validation  1,  CV1).  Another
+problem  is  to  predict  lines  in  some  environments  but  not  in  others;  this  is  LT-ET  (random  cross-
+validation  2,  CV2),  which  attempts  to  mimic  one  of  the  objectives  of  GP:  sparse  testing.  Another
+problem  comprises  predicting  lines  in  untested  environments;  that  is,  LT-EU  (random  cross-
+validation  0,  CV0).  Finally,  there  is  the  problem  of  predicting  lines  never  observed  in  never-
+observed  environments,  LU-EU  (cross-validation  00,  CV00)  [23 –27].
+Simulation  and  empirical  results  obtained  by  random  cross-validation  suggest  that  GS  enhan-
+ces  genetic  gains  by  shortening  the  breeding  cycle  (rapid  selection  cycle)  and/or  enhancing
+testing  efﬁciency  in  ﬁeld  evaluations  [3,28 –31].  Results  of  using  random  cross-validation  on
+maize  and  wheat  breeding  data  indicate  that  GS  can  signi ﬁcantly  enhance  prediction  accuracy
+related  to  pedigree  and  MAS  for  low-heritability  traits  [13,18 –20,32 –43].  Results  of  applying  GS
+in  maize  and  wheat  breeding  indicate  its  effectiveness  in  selection  [44 –48].
+Breeding  programs  worldwide  have  been  studying  and  applying  GS  and  GP  in  several  crops.  In
+parallel,  extensive  research  has  resulted  in  novel  statistical  methods  that  incorporate  pedigree,
+genomic,  and  environmental  covariates  (e.g.,  weather  data)  into  statistical-genetic  prediction
+models.  GBLUP  models  [49,50]  are  widely  used  in  GP,  and  the  extension  of  GBLUP  for
+incorporating  G  /C2  E  interactions  has  improved  the  accuracy  of  predicting  unobserved  cultivars
+in  environments  [23,24,51 –56].  New  models  for  assessing  the  GP  accuracy  of  discrete
+response  variables  (e.g.,  ordinal  disease  data,  such  as  rates,  count  data,  and  so  on)  were
+proposed  [57 –61]  together  with  Bayesian  genomic  models  for  analyzing  multiple  traits  and
+multiple  environments.  A  computationally  efﬁcient  Markov  Chain  Monte  Carlo  (MCMC)  method
+that  produces  full  conditional  distributions  of  the  parameters,  leading  to  exact  Gibbs  sampling
+for  the  posterior  distribution,  has  also  been  developed  [9].  Results  from  simulated  and  (two)
+extensive  data  sets  show  that,  when  the  correlation  between  the  traits  is  high,  a  proposed
+model  with  an  unstructured  covariance  matrix  is  preferred  over  the  diagonal  and  standard
+methods  to  help  improve  the  prediction  accuracy  for  grain  yield.  However,  when  correlations
+are  low,  it  is  enough  to  use  the  standard  model  [9].
+Depending  on  the  complexity  of  the  trait  and  the  prediction  scenario,  more  sophisticated
+models  result  in  moderate-to-high  gains  in  prediction  accuracy.  In  several  studies,  complex
+models  increased  prediction  accuracy  by  >10%  at  no  additional  cost.  The  use  of  simple
+models  may  miss  important  data  features  and  cause  losses  of  prediction  accuracy  for  complex
+traits,  where  nonlinear  models  usually  give  signi ﬁcantly  higher  prediction  accuracy  than  linear
+models  [20,36,55,56] .  One  of  the  ﬁrst  assessments  of  GP  in  wheat  breeding  was  performed  on
+a  collection  of  599  wheat  lines  evaluated  in  four  environments  using  pedigree  and  genomic
+information  with  two  different  models  [34].  The  models  were  the  standard  GBLUP  with  the  linear
+genomic  matrix  G  and  a  nonparametric  model,  Reproducing  Kernel  Hilbert  Spaces  (RKHS)
+regression  with  a  nonlinear  genomic  matrix,  the  Gaussian  kernel  (GK)  [62].  The  most  complex
+model,  RKHS  using  a  GK  nonlinear  kernel,  including  pedigree  and  marker  information,  gave  the
+highest  prediction  accuracy,  ranging  from  15%  to  36%,  with  respect  to  the  pedigree  model
+alone.  The  GP  model  RKHS  with  GK,  pedigree,  and  markers  has  been  used  for  predicting
+resistance  to  leaf,  stem,  and  stripe  rust,  septoria,  tan  spot,  and  Stagonospora  nodorum  blotch
+966  Trends  in  Plant  Science,  November  2017,  Vol.  22,  No.  11
+in  wheat;  compared  with  standard  least-squares  multiple  regression  methods,  RKHS  gave
+increases  in  accuracy  of  42%  and  48%  in  the  two  reported  studies  [63,64] ,  respectively.
+Based  on  the  encouraging  results  obtained  in  some  major  cereals,  preliminary  steps  have  been
+taken  to  deploy  GS  to  develop  superior  lines  more  quickly  and  enhance  the  rate  of  genetic  gain
+in  a  few  legume  crops,  such  as  pea,  soybean,  chickpea,  groundnut,  and  pigeon  pea  [65].  The
+recent  availability  of  cost-effective,  high-throughput  sequencing  has  facilitated  the  develop-
+ment  of  large-scale  genomic  resources  in  most  legumes.  Soybean  was  the  ﬁrst  legume  crop
+where  GS  was  deployed  for  improving  yield  and  agronomic  traits  using  genotyping-by-
+sequencing  (GBS)  in  a  breeding  program  [25].  To  assess  the  utility  of  GS  in  soybean  breeding
+programs  and  understand  the  effect  of  marker  selection  and  genotype  imputation,  prediction
+accuracies  were  calculated  for  two  genomic  prediction  models,  namely,  the  standard  GBLUP
+model  with  additive  effects  and  an  extended  GBLUP  with  additive-by-additive  epistasis.  High
+prediction  accuracy  (0.64)  indicated  the  potential  of  using  GS  to  improve  grain  yield  [25].
+In  the  case  of  chickpea,  a  collection  of  320  elite  breeding  lines  was  genotyped  using  Diversity
+Array  technology  (DArTseq)  and  phenotyped  for  yield-related  traits  in  two  environments  with
+two  different  treatments  (i.e.,  rainfed  and  irrigated)  in  two  different  seasons  [65,66] .  Various
+statistical  models  (RR-BLUP,  Kinship  GAUSS,  Bayes  Cp,  Bayes  B,  Baysian  LASSO,  and
+random  forest  regression  or  RFR)  resulted  in  high  prediction  accuracies  for  the  traits  of  interest;
+however,  not  much  variation  in  prediction  accuracy  among  the  different  models  was  observed
+[65,66] .  When  population  structure  was  included  in  the  model,  prediction  accuracies  improved
+slightly  for  days  to  maturity  (DM),  days  to  ﬂowering  (DF),  and  seed  dry  weight  (SDW),  but  not  for
+seed  yield  (SY).
+In  general,  early  statistical  models  developed  for  GP  in  animal  breeding  were  based  on  single-
+environment  assessments.  However,  in  plant  breeding,  G  /C2  E  interactions  are  of  paramount
+importance.  Just  as  G  /C2  E  interactions  are  a  fundamental  challenge  in  plant  breeding,  they  are
+also  increasingly  recognized  as  a  major  complexity  in  GP  models.
+GP  Incorporating  Genotype  /C2  Environment  Interaction
+Including  high-density  marker  platforms  with  G  /C2  E  interactions  increases  the  accuracy  of  GP
+models;  this  has  been  extensively  studied  in  bread  wheat,  maize,  and  legumes  [23 –
+27,55,56,67] .  In  all  GP  models  that  incorporate  G  /C2  E  interactions,  accuracy  with  respect
+to  single-environment  analyses  increased  10–40%  on  average  in  all  three  crop  species.  The
+main  models  used  to  assess  GP  accuracy  by  incorporating  G  /C2  E  interactions  and  their
+application  to  real  data  are  described  below.
+Multienvironment  trials  for  assessing  G  /C2  E  interactions  have  an  important  role  in  plant  breeding
+for  selecting  high-performing  and  stable  lines  across  environments.  Burgueño  et  al.  [23]  were
+the  ﬁrst  to  use  marker-  and  pedigree-based  GBLUP  models  for  assessing  G  /C2  E  interactions
+under  genomic  prediction,  while  Heslot  et  al.  [52]  incorporated  crop-modeling  data  to  study
+genomic  G  /C2  E  interactions.  A  reaction  norm  model,  where  the  main  and  interaction  effects  of
+markers  and  environmental  covariates  are  introduced  using  high-dimensional  random  vari-
+ance-covariance  structures  of  markers  and  environmental  covariates,  was  developed  by
+Jarquín  et  al.  [24]  as  an  extension  of  the  well-known  GBLUP  model.
+The  baseline  model  for  phenotypes  evaluated  in  different  environments  (yij)  can  be  described
+using  Equation  1:
+yij¼  m  þ  Eiþ  Ljþ  ELijþ  eij ½1/C138;
+Trends  in  Plant  Science,  November  2017,  Vol.  22,  No.  11  967
+where  m  is  the  overall  mean,  Ei(i=1,  .  .  .  ,I)  is  the  random  effect  of  the  ithenvironment,  Ljis  the
+random  effect  of  the  jthline  (j=1,  .  .  .  ,J),  ELijis  the  interaction  between  the  ithenvironment  and
+the  jthline,  and  eijis  the  random  error  term.  The  assumptions  are  as  follows:  Ei/C24iidN  0;  s2
+E/C0  /C1
+,
+Lj/C24iidN  0;  s2
+L/C0  /C1
+,  ELij/C24iidN  0;  s2
+EL/C0  /C1
+,  and  eij/C24iidN  0;  s2
+e/C0  /C1
+,  with  N(.,.)  denoting  a  normal  distribution,  and
+‘iid’  standing  for  independent  and  identically  distributed.  However,  when  the  number  of
+environments  is  small,  it  may  be  better  to  assume  it  as  a  ﬁxed  effect.
+Markers  can  be  introduced  in  Equation  1  such  that  the  effect  of  the  line  (Lj)  can  be  replaced  by  gj
+expressed  as  a  linear  regression  on  marker  covariates  (it  approximates  the  genetic  value  of  the
+jthline).  The  vector  containing  the  ‘genomic  values ’  is  g  /C24  N  0;  Gs2
+g/C16  /C17
+,  where  s2
+gis  the  genomic
+variance,  and  G  is  a  genomic  relationship  matrix.  Also,  the  effect  of  the  line  (Lj)  can  be  replaced
+by  aj,  with  a  /C24  N  0;  As2
+a/C0  /C1
+,  where  A  is  the  numerical  additive  relationship  matrix  derived  from
+pedigree,  and  s2
+ais  the  additive  variance.  The  interaction  covariance  matrix  is  the  Hadamard
+product  of  two  covariance  structures,  one  describing  relationships  between  lines  based  on
+genetic  information  (pedigree  or  genomic)  and  the  other  relating  environments  by  means  of
+environmental  covariates.  When  the  environmental  effect  is  assumed  as  ﬁxed,  the  interaction
+term  is  the  Hadamard  product  of  the  ﬁxed  effect  of  environments  and  the  covariance  matrix  of
+lines  that  was  built  with  the  genetic  information.  When  environmental  covariables  are  used,  the
+named  reaction  norm  is  justi ﬁed  because  the  genotypic  effect  is  a  reaction  to  those  environ-
+mental  covariables,  whereas,  when  environmental  covariables  are  not  used,  the  reaction  norm
+models  have  unknown  environmental  deviations.
+This  reaction  norm  model  [24]  has  been  applied  successfully  using  pedigree  and  molecular
+markers  in  multienvironments  adding  environmental  covariates,  for  example,  in  cotton  trials
+with  environmental  covariates  [68],  in  GP  of  extensive  wheat  gene  bank  accessions  [69],  in  GP
+of  Fe  and  Zn  in  wheat  grain  [70],  in  GP  of  bread  wheat  lines  in  sites  located  in  diverse
+agroecological  zones  [27,25] ,  in  GP  prediction  of  wheat  lines  evaluated  in  Mexico  and  predicted
+in  locations  in  South  Asia  [71],  and  in  GP  of  extensive  ﬁeld  trials  in  wheat  on  different  continents
+[67].  The  reaction  norm  model  was  also  extended  to  G  /C2  E  interactions  with  maize  and  wheat
+disease  ordinal  and  count  data  by  Montesinos-López  et  al.  [57 –60]  (see  ‘Bayesian  genomic-
+enabled  prediction  models  for  ordinal  and  count  data  incorporating  genotype  /C2  environment
+interaction ’  in  the  supplementary  information  online).  The  increase  in  GP  accuracy  of  the
+reaction  norm  model  with  G  /C2  E  interactions  was  on  average  7–20%  relative  to  the  prediction
+accuracy  of  the  GBLUP  without  including  G  /C2  E  interactions.
+In  areas  such  as  Kansas,  USA,  wheat  production  is  impacted  by  yearly  climate  factors,  such  as
+extreme  temperatures  and  erratic  precipitation.  Yearly  effects  are  not  repeatable  and  represent
+the  dynamic  part  of  the  G  /C2  E  interactions,  whereas  site  effects  represent  the  static  repeatable
+component.  The  accuracy  of  predicting  unobserved  historical  sites  in  the  wheat  breeding
+program  of  Kansas  State  University  reaches  0.54,  but  unobserved  years  can  be  predicted  with
+only  0.17  accuracy  [26].  Results  of  using  the  reaction  norm  model  with  pedigree  and  genomic
+information  for  predicting  400 –500  bread  wheat  lines  in  South  Asian  locations  using  approxi-
+mately  60  000  lines  trained  in  different  Mexican  environments  indicated  that  GP  is  more
+accurate  (/C240.35)  than  PS  for  predicting  unobserved  wheat  lines  in  different  South  Asian
+locations  (/C240.20)  [71];  perhaps  this  last  result  is  the  simplest  proof  of  the  concept  that  GP
+works  better  than  PS.
+GP  Incorporating  Marker  /C2  Environment  Interaction  Models
+The  G  /C2  E  interaction  model  described  by  López-Cruz  et  al.  [53]  decomposes  the  marker
+effects  into  components  that  are  common  across  environments  (stability)  and  environment-
+speci ﬁc  deviations  (interaction)  [see  ‘The  G  /C2  E  (or  M  /C2  E)  model  with  linear  kernel ’  in  the
+supplementary  information  online].  This  model  borrows  information  from  across  environments
+968  Trends  in  Plant  Science,  November  2017,  Vol.  22,  No.  11
+while  allowing  marker  effects  to  change  in  each  environment.  It  can  be  implemented  using
+shrinkage  methods  as  well  as  variable  selection  methods  and,  thus,  can  be  used  to  identify
+genomic  regions  whose  effects  are  stable  across  environments  and  other  regions  that  are
+responsible  for  G  /C2  E  interactions  [54].  The  G  /C2  E  interaction  model  of  López-Cruz  et  al.  [53]  is
+best  suited  for  the  joint  analysis  of  positively  correlated  environments  and  was  used  to  analyze
+three  CIMMYT  wheat  data  sets.  The  prediction  accuracy  of  the  G  /C2  E  interaction  model  was
+greater  than  across-environment  or  single-environment  analyses  (5–29%  when  predicting  each
+of  the  environments).  Recently,  this  genomic  G  /C2  E  interaction  model  was  used  to  predict
+untested  durum  wheat  lines  in  environments,  as  well  as  a  variable  selection  model  to  identify
+genomic  regions  whose  effects  are  stable  across  environments  and  others  that  are  environ-
+ment  speci ﬁc  [54].
+In  the  models  of  Jarquín  et  al.  [24]  and  López-Cruz  et  al.  [53],  the  kernel  used  is  the  linear  kernel
+GBLUP.  In  a  new  study,  Cuevas  et  al.  [55]  proposed  a  G  /C2  E  interaction  model  similar  to  that  of
+López-Cruz  et  al.  [53]  but  with  a  nonlinear  kernel,  the  Gaussian  kernel  (GK),  which  is  similar  to  that
+used  in  the  RKHS  [62]  [see  ‘The  G  /C2  E  model  of  López-Cruz  et  al.  (2015)  with  a  non-linear
+Gaussian  kernel  method ’  in  the  supplementary  information  online].  Using  two  extensive  data  sets,
+the  authors  found  that,  for  the  wheat  data  sets,  the  GK  gave  prediction  accuracies  up  to  17%
+higher  than  the  GBLUP  linear  kernel.  For  the  maize  data  set,  the  GK  was  on  average  5–6%  higher
+than  the  GBLUP  linear  kernel.  The  advantage  of  the  GK  over  the  GBLUP  is  that  it  is  a  more  ﬂexible
+kernel  that  accounts  for  small  and  complex  marker  main  effects  and  speci ﬁc  interactions.
+One  weakness  of  both  G  /C2  E  interaction  models  with  a  linear  [53]  and  nonlinear  kernel  [55]  is
+that  positive  correlations  between  environments  are  assumed.  However,  when  the  correlation
+between  environments  is  low  or  negative,  these  models  do  not  increase  the  prediction
+accuracy  of  environments  with  negligible  or  negative  correlations.  The  strength  of  the  Bayesian
+models  with  G  /C2  E  interactions  used  under  the  linear  kernel  GBLUP  or  under  the  nonlinear
+Gaussian  kernel  (GK)  is  that  they  overcome  the  limitation  of  the  previous  models  when
+associations  between  environments  are  negligible  or  negative,  as  shown  by  Cuevas  et  al.
+[56].  These  authors  proposed  considering  the  genetic  effects  uð  Þ  described  by  the  Kronecker
+product  of  variance-covariance  matrices  of  genetic  correlations  between  environments  and
+genomic  kernels  through  markers  under  two  linear  kernel  methods:  linear  (GBLUP)  and
+Gaussian  (GK).  An  extension  includes  the  same  genetic  component  as  the  ﬁrst  model  uð  Þ,
+plus  an  extra  residual  genetic  component,  f,  which  captures  random  effects  between  environ-
+ments  that  were  not  accounted  for  by  the  random  effects  u  (see  ‘Multienvironment  genoty-
+pe  /C2  environment  interaction  model  with  linear  and  nonlinear  kernels ’  in  the  supplementary
+information  online).  Results  of  the  analyses  of  ﬁve  data  sets  showed  that:  (i)  G  /C2  E  interaction
+models  always  had  signi ﬁcantly  higher  prediction  accuracy  than  single-environment  models;
+and  (ii)  the  prediction  accuracy  of  G  /C2  E  models  with  u  and  f  over  the  multienvironment  model
+with  only  u  was  higher  85%  of  the  time  with  GBLUP  and  45%  of  the  time  with  GK  across  the
+ﬁve  data  sets.  Results  indicated  that  including  the  random  effect  f  was  still  bene ﬁcial  for
+increasing  GP  accuracy  after  adjusting  for  the  random  effect  u.  Prediction  accuracy  of  the
+G  /C2  E  interaction  model  methods  (GBLUP  or  GK)  increased  up  to  85%  over  the  accuracy  of
+the  single-environment  model.
+Machine  Learning  for  Genomic  Prediction
+In  an  applied  GS  context,  the  focus  should  not  be  on  predicting  all  individuals,  but  rather  on
+classifying  individuals  into  upper,  middle,  or  lower  classes,  depending  on  the  trait  under  selection.
+Using  classi ﬁers  in  GS  is  attractive  because  they  are  trained  to  maximize  the  probability  of  an
+individual  being  a  memberof  the  target  class,  rather  than  searching  for  its  overallperformance  [21].
+González-Camacho  et  al.  [18]  used  a  radial  basis  neural  network  on  an  extensive  genomic  maize
+data  set  comprising  several  traits  in  different  environments  and  compared  the  results  with  RKHS
+Trends  in  Plant  Science,  November  2017,  Vol.  22,  No.  11  969
+and  with  a  linear  regression  model.  The  accuracy  of  neural  network  methods  was  similar  to  that  of
+RKHS  and  slightly  higher  than  that  of  the  linear  regression.
+In  a  recent  study,  two  neural  network  classi ﬁers  (a  multilayer  perceptron,  MLP,  and  a  probabi-
+listic  neural  network,  PNN)  were  compared  for  predicting  the  probability  of  an  individual
+member  of  a  target  phenotypic  class,  using  33  maize  and  wheat  genomic  and  phenotypic
+data  sets  [19].  The  authors  focused  on  the  15th  and  30th  percentiles  of  the  upper  and  lower
+classes  to  select  the  best  individuals,  as  commonly  done  in  GS  (for  traits  such  as  grain  yield,  the
+upper  classes  are  the  target;  for  diseases,  the  focus  is  on  the  lower  classes).  The  criterion  for
+assessing  the  prediction  accuracy  of  MLP  and  PNN  was  the  area  under  the  receiver
+operating  characteristic  curve  (AUC).  The  parameters  of  both  classi ﬁers  were  estimated
+by  optimizing  the  AUC  for  a  speci ﬁc  target  class.  The  PNN  was  found  to  be  more  accurate  than
+the  classi ﬁer  MLP  for  assigning  maize  and  wheat  lines  to  the  correct  upper,  middle,  or  lower
+class.  Results  for  the  wheat  data  set  with  continuous  traits  split  into  two  and  three  classes
+showed  that  the  performance  of  PNN  with  three  classes  was  better  than  PNN  with  two  classes
+when  classifying  individuals  into  the  upper  and  lower  (15%  or  30%)  categories.  Depending  on
+the  maize  trait –environment  combination,  AUC  for  PNN30%  or  for  PNN15%  upper  trait  (grain
+yield)  was  higher  than  the  AUC  of  MLP.  For  the  lower  class,  ﬂowering  (male  and  female)  traits,
+PNN15%  and  PNN30%  always  had  better  AUC  than  MLP15%  and  MLP30%  [19].
+Genetic  Gains  from  Rapid  Selection  Cycle  GS:  CIMMYT  Maize  Biparental  Populations
+The  fundamental  goal  of  using  GS  in  breeding  is  to  achieve  greater  genetic  gains  at  a  lower  cost
+and  in  less  time  than  with  conventional  pedigree  breeding.  To  achieve  a  shorter  interval  cycle,  a
+favorable  use  of  GS  is  prediction  within  full-sib  families,  because  biparental  populations  have
+high  LD  between  marker  alleles  and  trait  alleles  with  no  group  structure.
+There  are  few  studies  that  measure  the  genetic  gains  achieved  through  use  of  a  GS-based
+rapid  selection  cycle.  The  ﬁrst  study  conﬁrming  the  promise  of  a  rapid  selection  cycle  in  GP  of
+biparental  populations,  as  well  as  previous  ﬁndings  from  random  cross-validation  studies,  was
+conducted  by  Massman  et  al.  [44]  and  showed  that  GS  improved  maize  genetic  gains  per  unit
+of  time.  Genetic  gains  were  also  reported  by  Asoro  et  al.  [45]  in  oat  and  by  Rutkoski  et  al.  [48]  in
+wheat,  which  showed  that  GS  and  PS  provided  similar  realized  genetic  gains  per  unit  of  time.
+Genetic  gain  studies  comparing  GS  cycles  C0,  C1,  C2,  and  C3with  pedigree  selection  on  eight
+CIMMYT  tropical  biparental  maize  populations  in  Sub-Saharan  Africa  were  conducted  by
+Beyene  et  al.  [47]  under  drought  conditions.  The  authors  showed  that:  (i)  the  average  gain
+per  cycle  (across  all  eight  biparental  populations)  from  GS  was  0.086  t/ha  under  managed
+drought  conditions;  (ii)  the  average  grain  yield  of  C3-derived  hybrids  was  signi ﬁcantly  higher
+than  that  of  hybrids  derived  from  C0;  and  (iii)  three  GS  cycles  can  be  achieved  in  1  year.  The
+authors  concluded  that  hybrids  derived  from  C3produced  7.3%  higher  grain  yield  than  those
+developed  through  conventional  pedigree  breeding.  By  contrast,  the  average  gain  per  cycle
+using  marker-assisted  recurrent  selection  (MARS)  across  ten  populations  was  0.051  t/ha
+per  cycle  under  managed  drought  stress.  Extensive  ﬁeld  trials  were  conducted  in  several
+managed  drought  environments  in  Sub-Saharan  Africa  to  evaluate  the  grain  yield  performance
+of  maize  hybrids  derived  from  GS-based  lines  selected  from  different  populations.  Lines  derived
+from  cycle  C3GS  in  hybrid  combination  produced  signi ﬁcantly  higher  average  grain  yield  than
+lines  from  C0GS  in  hybrid  combination  (Y.  Beyene,  2017).
+Another  example  of  genetic  gains  from  rapid-cycle  GS  on  CIMMYT  maize  is  two  biparental
+maize  populations  (F2:3)  from  Asia  (CAP1  and  CAP2)  that  were  developed  and  evaluated  for
+testcross  performance  under  drought  and  optimal  conditions  [72].  The  genetic  gains  per  year
+for  PS  versus  GS  in  drought  environments  were  0.067  t/ha  versus  0.124  t/ha,  respectively,  for
+970  Trends  in  Plant  Science,  November  2017,  Vol.  22,  No.  11
+CAP1,  and  0.076  t/ha  versus  0.104  t/ha,  respectively,  for  CAP2.  The  corresponding  genetic
+gains  per  year  for  PS  versus  GS  in  optimal  environments  were  0.084  t/ha  versus  0.140  t/ha,
+respectively,  for  CAP1,  and  0.123  t/ha  versus  0.13  t/ha,  respectively,  for  CAP2.  Results  of  this
+study  conﬁrmed  that  GS  of  superior  plant  phenotypes  produced  rapid  genetic  gains  in  drought
+tolerance  in  maize.
+Genetic  Gains  from  Rapid  Selection  Cycle  GS:  CIMMYT  Multiparental  Populations
+Most  GS  results  in  maize  have  been  achieved  by  rapid  cycling  of  biparental  populations
+(e.g.,  F2:3segregating  populations  crossed  with  a  tester  from  the  opposite  heterotic  group ).
+Five  years  ago,  the  Global  Maize  Program  of  CIMMYT  designed  a  GS  rapid  cycle  of  multi-
+parental  crosses.  Fifteen  elite  tropical  maize  lines  were  crossed  in  diallelic  fashion  to  form  cycle
+0  (C0),  which  was  genotyped  using  GBS  markers  and  phenotyped  at  two  locations  in  Mexico;
+plants  with  the  best  phenotype  were  selected  to  form  the  parents  for  GS  cycle  1  (C1).  The  C1
+parents  were  intercrossed  and  the  progeny  genotyped  with  the  same  GBS  markers  used  for
+the  C0population  [73].
+Two  cycles  per  year  were  completed  and,  at  the  end  of  the  second  year,  seeds  from  cycles  C0,
+C1,  C2,  C3,  and  C4were  collected,  assembled,  and  sown  at  two  locations  in  Mexico.  Fifty
+entries  per  genomic  cycle  were  sown  at  each  location,  together  with  two  widely  used
+commercial  tropical  maize  hybrids.  Average  genomic  grain  yield  gains  reached  0.134  t/ha,
+with  C0producing  6.653  t/ha.  Grain  yield  of  C1was  slightly  lower  (6.488),  and  cycles  C2,  C3,
+and  C4produced  mean  yields  of  7.022,  6.879,  and  7.126  t/ha,  respectively.  The  realized  grain
+yield  from  C1to  C4reached  0.225  t/ha  per  cycle,  which  the  authors  considered  equivalent  to
+0.1  t/ha  per  year  over  a  breeding  period  of  4.5  years.  A  slight  decline  in  genetic  diversity  was
+detected  at  C4compared  with  C0.
+Prospects  for  Enhanced  Use  of  GS  in  Plant  Breeding
+To  accelerate  the  deployment  of  GS  in  crop  breeding  while  reducing  the  cost  of  line  and  hybrid
+development,  here  we  examine  the  combined  use  of  GS  with  high  throughput  phenotype  (HTP)
+for  early-generation  testing  in  plant  breeding.  In  addition,  we  examine  the  application  of  GS  in
+germplasm  enhancement  and  prebreeding  using  gene  bank  accessions.
+Combining  Multi-Trait  Multienvironment  GS  with  High-Throughput  Phenotyping:  The
+CIMMYT  Case
+In  modern  agriculture,  high-resolution  cameras  are  used  to  obtain  hundreds  of  reﬂectance  data
+measured  at  discrete  narrow  bands  (wavelengths)  to  cover  the  whole  spectrum.  This  informa-
+tion  is  used  to  construct  vegetation  indices  (e.g.,  Green  Normalized  Difference  Vegetation  Index
+or  NDVI)  to  predict  primary  traits  (e.g.,  grain  yield).  However,  these  indices  use  only  certain
+bands  and  are  cultivar  speci ﬁc;  thus,  they  fail  to  capture  considerable  information  or  perform
+robustly  for  all  cultivars.  The  advantage  of  this  imaging  technology  is  that  massive  numbers  of
+phenotypes  can  be  screened  inexpensively  during  early-generation  testing.
+The  main  objective  of  GS  is  to  reduce  phenotyping  costs  by  using  markers  and  accelerate
+genetic  gains,  whereas  the  aim  of  HTP  is  to  measure  high-density  phenotypes  in  very  large
+numbers  of  individuals  or  breeding  lines  across  time  and  space  using  remote  or  proximal
+sensing.  This  can  increase  both  the  accuracy  and  intensity  of  selection  and,  subsequently,  the
+selection  response,  while  decreasing  phenotyping  costs.  The  main  idea  of  HTP  is  to  use
+secondary  traits  related  to  grain  yield,  disease  resistance,  or  end-use  quality  that  may  be  useful
+in  early-generation  testing  of  lines.  A  recent  study  [74]  found  that  the  highest  accuracy  when
+predicting  grain  yield  is  achieved  by  the  use  of  broader  selection  of  wavelengths  (see  ‘Predicting
+grain  yield  using  canopy  hyperspectral  reﬂectance  in  wheat  breeding  data ’  in  the  supplemen-
+tary  information  online).
+Trends  in  Plant  Science,  November  2017,  Vol.  22,  No.  11  971
+Using  HTP  platforms  with  vegetation  indices  as  predictor  traits  in  pedigree  and  GS  models  can
+increase  the  prediction  accuracy  for  grain  yield  [75].  Prediction  during  early-generation  testing  is
+important  to  enhance  genetic  gains  during  early  stages  of  the  breeding  cycle,  but  GS  is
+economically  unfeasible  at  those  stages  due  to  the  large  number  of  plants  in  the  ﬁeld;  thus,
+while  assessing  pedigree  relationships  has  the  advantage  of  not  costing  anything,  their  use  fails
+to  exploit  Mendelian  sampling,  in  contrast  to  GS.  Therefore,  using  multivariate  pedigree-based
+prediction  models  that  incorporate  such  predictor  traits  while  using  an  HTP  platform  offers  a
+low-cost  solution  for  predicting  grain  yield  among  and  within  families  in  early-generation  testing,
+as  demonstrated  by  Rutkoski  et  al.  [75].  These  authors  found  that  within-environment  sec-
+ondary  vegetative  indices  increased  prediction  accuracies  for  grain  yield  by  59%  using  pedigree
+relationships  and  by  70%  using  genomic  relationships.  These  results  indicate  that  secondary
+traits  measured  by  HTP  and  used  with  pedigree  can  improve  the  prediction  accuracy  of  primary
+traits  during  the  early  stages  of  breeding.  Reynolds  and  Langridge  [76]  found  that  HTP
+techniques  are  effective  for  evaluating  genetic  resources  for  complex  trait  expression.
+HTP  platforms  are  useful  to  measure  secondary  traits  that  are  genetically  correlated  with  grain
+yield  and  that  can  be  incorporated  in  multivariate  pedigree  and  genomic  prediction  models,
+improving  indirect  selection  for  grain  yield.  Sun  et  al.  [77]  used  a  statistical  model  that  estimated
+BVs  of  secondary  traits  together  with  multivariate  pedigree  and  genomic  models;  the  authors
+found  a  70%  (on  average)  improvement  in  the  accuracy  of  selection  for  grain  yield,  including
+secondary  traits  in  both  TRN  and  TST  populations.
+A  recent  study  developed  statistical  models  to  assess  hyperspectral  wavelength  /C2  environ-
+ment  interactions  in  HTP,  incorporating  genomic  and  pedigree  G  /C2  E  interactions  [78].
+Although  little  GP  accuracy  was  achieved,  important  hyperspectral  wavelength  /C2  environment
+interactions  were  observed,  demonstrating  that  GS  coupled  with  HTP  can  be  a  powerful  tool
+applied  to  early-generation  testing  of  a  large  number  of  selection  candidates.  The  full  condi-
+tional  distributions  for  modeling  the  three-way  trait  /C2  G  /C2  E  interaction  model  of  Montesinos-
+López  et  al.  [9]  can  be  adapted  to  include  the  hyperspectral  bands  in  the  functional  regression
+approach  recently  described  by  Montesinos-López  et  al.  [74,78] .
+Exploring  the  Application  of  GS  to  Gene  Bank  Accessions  for  Germplasm  Enhancement
+Although  the  accessions  stored  in  gene  banks  represent  a  rich  resource  for  breeders,  alleles
+need  to  be  extracted  from  the  accessions  for  cultivar  development,  which  is  time-consuming
+and  expensive  [79,80] .  Lengthy  prebreeding  programs  are  required  to  develop  lines  that
+combine  favorable  alleles  from  the  germplasm  bank  with  good  agronomic  performance  and
+that  can  be  used  as  parents  in  a  breeding  program.  Based  on  the  simulation  of  various
+prebreeding  options,  germplasm  enhancement  breeding  programs  can  start  directly  from
+landraces  or  from  landraces  crossed  with  elite  testers  [81].
+The  GP  accuracy  of  8416  Mexican  wheat  landrace  accessions  and  2403  Iranian  wheat
+landrace  accessions  from  the  CIMMYT  gene  bank  were  examined  by  Crossa  et  al.  [69].
+The  authors  measured  two  traits  in  two  environments  and  several  highly  heritable  traits  in  a
+single  optimum  environment.  The  GP  accuracy  for  several  traits  (maturity,  quality  traits,  and
+grain  yield  and  yield  components)  under  the  different  prediction  scenarios  was  high,  ranging
+from  0.5  to  0.7.  In  soybean,  Jarquín  et  al.  [25]  analyzed  the  USDA  soybean  collection  using
+different  cross-validation  schemes  and  grouping  factors  (trials,  states,  and  genetic  subpopu-
+lations);  results  showed  relatively  high  prediction  accuracies  that  should  help  breeders  to
+introgress  useful  genetic  variation  (Box  1).
+These  preliminary  results  of  the  accuracy  of  GP  of  gene  bank  accessions  favor  the  idea  of
+applying  GS  to  introgress  landrace  accessions  in  elite  germplasm  and  form  gene  pools  and
+972  Trends  in  Plant  Science,  November  2017,  Vol.  22,  No.  11
+populations  suitable  for  prebreeding  and  germplasm  enhancement  programs.  However,
+further  research  is  required  in  this  area.
+Concluding  Remarks
+Many  statistical  methods  have  been  developed  to  predict  unobserved  individuals  in  GS.  In
+general,  linear  models  (e.g.,  GBLUP)  and  machine-learning  algorithms  have  been  successful  in
+recognizing  complex  patterns  and  making  correct  decisions  based  on  data.  Kernel-based
+methods,  such  as  the  RKHS,  have  extensively  delivered  good  genomic  predictions  in  plants.
+Several  statistical  models  based  on  the  standard  GBLUP  that  incorporate  G  /C2  E  interactions  in
+genomic  and  pedigree  predictions  have  provided  substantial  increases  in  the  accuracy  of
+predicting  unobserved  individuals  in  environments.  These  GS  prediction  models  can  help
+scientists  in  different  disciplines  to  develop  drought-  and  heat-tolerant  plants  by  exploiting
+positive  G  /C2  E  interactions.  Modeling  multi-trait  multi-environment  is  essential  for  improving  the
+prediction  accuracy  of  the  performance  of  newly  developed  lines  in  future  years.
+The  use  of  statistical  models  in  extensive  hyperspectral  image  technology  for  HTP,  together
+with  genomic  and  pedigree  information  in  early-generation  testing,  offers  an  opportunity  to
+accelerate  genetic  gains  by  increasing  the  intensity  of  selection.  Deep  machine-learning
+methods  using  neural  networking  appear  promising  to  increase  the  accuracy  of  genomic-
+enabled  prediction.  Genomic  selection  has  a  clear-cut  advantage  over  pedigree  breeding  and
+MAS  to  enhance  genetic  gains  for  complex  traits.  The  appropriate  use  of  genotyping  platforms
+combined  with  precise  phenotyping  platforms  will  also  help  enhance  prediction  accuracy  and
+accelerate  genetic  gains  by  shortening  the  breeding  cycle.  Further  research  is  required  to
+incorporate  GS  with  HTP  as  a  routine  component  in  plant  breeding  programs.
+Developing  GP  models  for  gene  bank  accessions  will  be  important  to  access  unexplored
+diversity  and  fast-track  useful  portions  into  breeding  programs  (also  see  Outstanding  Ques-
+tions).  Currently,  GS  is  the  most-promising  breeding  method  to  speed  the  development  and
+release  of  new  genotypes;  therefore,  the  use  of  GS  to  form  gene  pools  and  populations  from
+rich  gene  bank  accessions  merits  extensive  and  intensive  study,  especially  given  the  vulnera-
+bility  of  elite  lines  and  hybrids  to  severe  climate  change  effects.Box  1.  An  Example  of  GS  Deployment  in  Prebreeding
+Results  from  using  a  large  number  of  Mexican  and  Iranian  landraces  stored  in  the  wheat  gene  bank  of  CIMMYT  indicated
+that  prediction  accuracies  for  traits  evaluated  in  one  environment  for  TRN20-TST80  design  ranged  from  0.407  to  0.677
+for  Mexican  landraces  and  from  0.166  to  0.662  for  Iranian  landraces.  Also,  prediction  accuracies  of  the  20%  core  set
+were  similar  to  those  obtained  for  TRN20-TST80,  ranging  from  0.412  to  0.654  for  Mexican  landraces  and  from  0.182  to
+0.647  for  Iranian  landraces.  Interestingly,  the  correlations  for  complex  GYSM  traits  were  approximately  0.4  for  both
+Mexican  and  Iranian  landraces.  Results  of  correlations  when  incorporating  G  /C2  E  interactions  for  days  to  heading  and
+days  to  maturity  for  TRN20-TST80  were  approximately  0.61  for  Mexican  landraces  and  0.60  for  Iranian  landraces.  The
+20%  core  set  had  correlations  of  approximately  0.58  for  Mexican  landraces  and  0.50 –0.59  for  Iranian  landraces.
+Prediction  accuracies  of  the  10%  and  20%  diversity  and  predictive  core  subsets  were  generally  of  a  magnitude  that
+appeared  useful  for  predicting  the  value  of  gene  bank  accessions  and  for  breeding.  The  ﬁrst  application  would  be  to
+predict  the  genetic  value  of  all  genotyped  accessions  in  a  gene  bank  and  then  phenotype  only  those  that  have  the
+highest  predicted  genetic  values.  Then,  a  breeder  could  begin  prebreeding  following  several  strategies.  For  example,
+one  decision  would  be  to  initiate  a  prebreeding  conversion  approach  by  crossing  the  best  accessions  among
+themselves  to  improve  the  accessions  per  se  until  they  become  elite.  Another  strategy  could  be  to  start  an  introgression
+approach  by  crossing  selected  accessions  to  elite  materials.
+Nevertheless,  application  of  GS  for  germplasm  enhancement  will  have  to  be  performed  in  combination  with  standard
+introgression  of  exotic  to  elite  germplasm  and,  possibly,  a  series  of  backcrosses  to  the  elite  material.  Extracting  the  best
+accessions  directly  from  the  gene  banks  and  forming  productive  gene  pools  may  be  the  ﬁrst  stage  before  reﬁning  the
+gene  pools  and  evaluating  them  under  different  environmental  conditions.Outstanding  Questions
+How  can  GS  have  an  important  role  in
+enhancing  the  rate  of  genetic  gain?
+Are  currently  available  GS  models
+capable  of  providing  the  most  accu-
+rate  predictions?
+How  can  GS  accelerate  the  ﬂow  of
+favorable  alleles  directly  from  the  gene
+bank  to  breeding  programs?
+Are  we  ready  to  deploy  GS  in  pre-
+breeding  and  germplasm-enhance-
+ment  programs?
+Is  it  possible  to  combine  GS  and  pedi-
+gree  selection  with  HTP  to  accelerate
+genetic  gains  and  save  resources
+when  developing  lines  during  early-
+generation  testing?
+Trends  in  Plant  Science,  November  2017,  Vol.  22,  No.  11  973
+Acknowledgments
+The  authors  are  grateful  to  their  colleagues,  collaborators,  and  by  using  ﬁeld  and  lab  technician  from  CIMMYT  and
+ICRISAT,  as  well  as  scientists  in  National  Programs  who  collected  the  valuable  data  used  in  the  various  studies.  The
+authors  would  like  to  thank  Kevin  Pixley,  Daniel  Gianola,  and  four  anonymous  reviewers  for  their  positive,  careful,  and
+detailed  reviews  of  the  manuscript;  their  comments,  editing,  and  suggestions  signi ﬁcantly  improved  the  quality  and
+readability  of  the  manuscript.  The  authors  also  thank  Michael  Listman  for  editing  the  revised  version  of  the  manuscript.
+Supplemental  Information
+Supplemental  information  associated  with  this  article  can  be  found,  in  the  online  version,  at  http://dx.doi.org/10.1016/j.
+tplants.2017.08.011 .
+References
+1.  Bernardo,  R.  (2008)  Molecular  markers  and  selection  for  complex
+traits  in  plants:  learning  from  the  last  20  years.  Crop  Sci.  48,
+1649 –1664
+2.  Bernardo,  R.  (2016)  Bandwagons  I,  too,  have  known.  Theor.
+Appl.  Genet.  129,  2323 –2332
+3.  Meuwissen,  T.H.E.  et  al.  (2001)  Prediction  of  total  genetic  value
+using  genome-wide  dense  marker  maps.  Genetics  157,
+1819 –1829
+4.  Pszczola,  M.  et  al.  (2012)  Reliability  of  direct  genomic  values  for
+animals  with  different  relationships  within  and  to  the  reference
+population.  J.  Dairy  Sci.  95,  389 –400
+5.  Daetwyler,  H.D.  et  al.  (2010)  The  impact  of  genetic  architecture  on
+genome-wide  evaluation  methods.  Genetics  185,  1021 –1031
+6.  Isidro,  J.  et  al.  (2015)  Training  set  optimization  under  population
+structure  in  genomic  selection.  Theor.  Appl.  Genet.  2015,  145 –158
+7.  Lorenz,  A.J.  et  al.  (2012)  Potential  and  optimization  of  genomic
+selection  for  Fusarium  head  blight  resistance  in  six-row  barley.
+Crop  Sci.  52,  1609 –1621
+8.  Arruda,  M.P.  et  al.  (2015)  Genomic  selection  for  predicting  fusar-
+ium  head  blight  resistance  in  a  wheat  breeding  program.  Plant
+Genome  8,  1–12
+9.  Montesinos-López,  O.A.  et  al.  (2016)  A  genomic  Bayesian  multi-
+trait  and  multi-environment  model.  G3  6,  2725 –2744
+10.  Poland,  J.  and  Rutkoski,  J.  (2016)  Advances  and  challenges  in
+genomic  selection  for  disease  resistance.  Annu.  Rev.  Phytopa-
+thol.  54,  79–98
+11.  Bellman,  R.E.  (1961)  Adaptive  Control  Processes:  A  Guided  Tour,
+Princeton  University  Press
+12.  Cuevas,  J.  et  al.  (2014)  Bayesian  genomic-enabled  prediction  as
+an  inverse  problem.  G3  4,  1191 –2001
+13.  de  los  Campos,  G.  et  al.  (2012)  Whole  genome  regression  and
+prediction  methods  applied  to  plant  and  animal  breeding.  Genet-
+ics  193,  327 –345
+14.  Cerón-Rojas,  J.J.  et  al.  (2015)  A  genomic  selection  index  applied
+to  simulated  and  real  data.  G3  5,  2155 –2164
+15.  LeCun,  Y.  et  al.  (2015)  Deep  learning.  Nature  521,  436 –444
+16.  Gianola,  D.  et  al.  (2006)  Genomic-assisted  prediction  of  genetic
+values  with  a  semi-parametric  procedure.  Genetics  173,
+1761 –1776
+17.  Gianola,  D.  et  al.  (2011)  Predicting  complex  quantitative  traits  with
+Bayesian  neural  networks:  a  case  study  with  Jersey  cows  and
+wheat.  BMC  Genet.  12,  87
+18.  González-Camacho,  J.M.  et  al.  (2012)  Genome-enabled  predic-
+tion  of  genetic  values  using  Radial  Basis  Function  Neural  Net-
+works.  Theor.  Appl.  Genet.  125,  759 –771
+19.  González-Camacho,  J.M.  et  al.  (2016)  Genome-enabled  predic-
+tion  using  probabilistic  neural  network  classi ﬁers.  BMC  Genomics
+17,  208
+20.  Pérez-Rodríguez,  P.  et  al.  (2012)  A  comparison  between  linear
+and  non-parametric  regression  models  for  genome-enabled  pre-
+diction  in  wheat.  G3:  Genes|Genomes|Genetics  2,  1595 –1605
+21.  Ornella,  L.  et  al.  (2014)  Genomic-enabled  prediction  with  classi ﬁ-
+cation  algorithms.  Heredity  112,  616 –626
+22.  Gonzalez-Recio,  O.  et  al.  (2014)  Machine  learning  methods  and
+predictive  ability  metrics  for  genome-wide  prediction  of  complex
+traits.  Livest.  Sci.  166,  217 –23123.  Burgueño,  J.  et  al.  (2012)  Genomic  prediction  of  breeding  values
+when  modeling  genotype  /C2  environment  interaction  using  pedi-
+gree  and  dense  molecular  markers.  Crop  Sci.  52,  707 –719
+24.  Jarquín,  D.  et  al.  (2014)  A  reaction  norm  model  for  genomic
+selection  using  high-dimensional  genomic  and  environmental
+data.  Theor.  Appl.  Genet.  127,  595 –607
+25.  Jarquín,  D.  et  al.  (2016)  Genotyping  by  sequencing  for  genomic
+prediction  in  a  soybean  breeding  population.  BMC  Genomics  15,
+740
+26.  Jarquín,  D.  et  al.  (2017)  Increasing  genomic-enabled  prediction
+accuracy  by  modeling  genotype  /C2  environment  interaction  in
+Kansas  wheat.  Plant  Genome  Published  online  June  8,  2017.
+http://dx.doi.org/10.3835/plantgenome2016.12.0130
+27.  Saint-Pierre,  C.  et  al.  (2016)  Genomic  prediction  models  for  grain
+yield  of  spring  bread  wheat  in  diverse  agro-ecological  zones.  Sci.
+Rep.  6,  27312
+28.  Bernardo,  R.  and  Yu,  J.M.  (2007)  Prospects  for  genome-wide
+selection  for  quantitative  traits  in  maize.  Crop  Sci.  47,  1082 –1090
+29.  Lorenzana,  R.E.  and  Bernardo,  R.  (2009)  Accuracy  of  genotypic
+value  predictions  for  marker-based  selection  in  biparental  plant
+populations.  Theor.  Appl.  Genet.  120,  151 –161
+30.  Heffner,  E.L.  et  al.  (2009)  Genomic  selection  for  crop  improve-
+ment.  Crop  Sci.  49,  1–12
+31.  Heffner,  E.L.  et  al.  (2010)  Plant  breeding  with  genomic  selection:
+gain  per  unit  time  and  cost.  Crop  Sci.  50,  1681 –1690
+32.  de  los  Campos,  G.  et  al.  (2009)  Predicting  quantitative  traits  with
+regression  models  for  dense  molecular  markers  and  pedigree.
+Genetics  182,  375 –385
+33.  de  los  Campos,  G.  et  al.  (2010)  Semi-parametric  genomic-
+enabled  prediction  of  genetic  values  using  reproducing  kernel
+Hilbert  spaces  methods.  Genet.  Res.  92,  295 –308
+34.  Crossa,  J.  et  al.  (2010)  Prediction  of  genetic  values  of  quantitative
+traits  in  plant  breeding  using  pedigree  and  molecular  markers.
+Genetics  186,  713 –724
+35.  Crossa,  J.  et  al.  (2011)  Genomic  selection  and  prediction  in  plant
+breeding.  J.  Crop  Improv.  25,  239 –226
+36.  Crossa,  J.  et  al.  (2013)  Genomic  prediction  in  maize  breeding
+populations  with  genotyping-by-sequencing.  G3:  Genes|
+Genomes|Genetics  3,  1903 –1926
+37.  Crossa,  J.  et  al.  (2014)  Genomic  prediction  in  CIMMYT  maize  and
+wheat  breeding  programs.  Heredity  112,  48–60
+38.  Pérez-Rodríguez,  P.  and  de  los  Campos,  G.  (2014)  Genome-
+wide  regression  and  prediction  with  the  BGLR  statistical  pack-
+age.  Genetics  198,  483 –495
+39.  Hickey,  J.M.  et  al.  (2012)  Factors  affecting  the  accuracy  of  geno-
+type  imputation  in  populations  from  several  maize  breeding  pro-
+grams.  Crop  Sci.  52,  654 –663
+40.  Riedelsheimer,  C.  et  al.  (2012)  Genomic  and  metabolic  prediction
+of  complex  heterotic  traits  in  hybrid  maize.  Nat.  Genet.  44,
+217 –220
+41.  Zhao,  Y.  et  al.  (2012)  Accuracy  of  genomic  selection  in  European
+maize  elite  breeding  populations.  Theor.  Appl.  Genet.  124,
+769 –776
+42.  Windhausen,  V.S.  et  al.  (2012)  Effectiveness  of  genomic  predic-
+tion  of  maize  hybrid  performance  in  different  breeding  populations
+and  environments.  G3:  Genes|Genomes|Genetics  2,  1427 –1436
+974  Trends  in  Plant  Science,  November  2017,  Vol.  22,  No.  11
+43.  Technow,  F.  et  al.  (2013)  Genomic  prediction  of  northern  corn  leaf
+blight  resistance  in  maize  with  combined  or  separated  training
+sets  for  heterotic  groups.  G3:  Genes|Genomes|Genetics  3,
+197 –203
+44.  Massman,  J.M.  et  al.  (2013)  Genome-wide  selection  versus
+marker-assisted  recurrent  selection  to  improve  grain  yield  and
+stover-quality  traits  for  cellulosic  ethanol  in  maize.  Crop  Sci.  53,
+58–66
+45.  Asoro,  F.G.  et  al.  (2013)  Genomic,  marker-assisted,  and  pedi-
+gree-BLUP  selection  methods  for  b-glucan  concentration  in  elite
+oat.  Crop  Sci.  53,  1894 –1906
+46.  Combs,  E.  and  Bernardo,  R.  (2013)  Genome-wide  selection  to
+introgress  semidwarf  corn  germplasm  into  U.S.  Corn  Belt
+inbreds.  Crop  Sci.  53,  1427 –1436
+47.  Beyene,  Y.  et  al.  (2015)  Genetic  gains  in  grain  yield  through
+genomic  selection  in  eight  bi-parental  maize  populations  under
+drought  stress.  Crop  Sci.  55,  154c163
+48.  Rutkoski,  J.  et  al.  (2015)  Genetic  gain  from  phenotypic  and
+genomic  selection  for  quantitative  resistance  to  stem  rust  of
+wheat.  Plant  Genome  8,  1–10
+49.  VanRaden,  P.M.  (2007)  Genomic  measures  of  relationship  and
+inbreeding.  Interbull  Annu.  Meet.  Proc.  37,  33–36
+50.  VanRaden,  P.M.  (2008)  Efﬁcient  methods  to  compute  genomic
+predictions.  J.  Dairy  Sci.  91,  4414 –4423
+51.  Heslot,  N.  et  al.  (2012)  Genomic  selection  in  plant  breeding:  a
+comparison  of  models.  Crop  Sci.  52,  146 –160
+52.  Heslot,  N.  et  al.  (2014)  Integrating  environmental  covariates  and
+crop  modeling  into  the  genomic  selection  framework  to  predict
+genotype  by  environment  interactions.  Theor.  Appl.  Genet.  127,
+463 –480
+53.  López-Cruz,  M.  et  al.  (2015)  Increased  prediction  accuracy  in
+wheat  breeding  trials  using  a  marker  /C2  environment  interaction
+genomic  selection  model.  G3:  Genes|Genomes|Genetics  5,
+569 –582
+54.  Crossa,  J.  et  al.  (2016)  Extending  the  Marker  /C2  Environment
+interaction  model  for  genomic-enabled  prediction  and
+genome-wide  association  analyses  in  durum  wheat.  Crop  Sci.
+56,  1–17
+55.  Cuevas,  J.  et  al.  (2016)  Genomic  prediction  of  genotype  -
+/C2  environment  interaction  kernel  regression  models.  Plant
+Genome  Published  online  September  22,  2016.  http://dx.doi.
+org/10.3835/plantgenome2016.03.0024
+56.  Cuevas,  J.  et  al.  (2017)  Bayesian  genomic  prediction  with  gen-
+otype  /C2  environment  interaction  kernel  models.  G3:  Genes|
+Genomes|Genetics  7,  41–53
+57.  Montesinos-López,  O.A.  et  al.  (2015)  Threshold  models  for
+genome-enabled  prediction  of  ordinal  categorical  traits  in  plant
+breeding.  G3:  Genes|Genomes|Genetics  5,  291 –300
+58.  Montesinos-López,  O.A.  et  al.  (2015)  Genomic-enabled  predic-
+tion  of  ordinal  data  with  Bayesian  logistic  ordinal  regression.  G3:
+Genes|Genomes|Genetics  5,  2113 –2126
+59.  Montesinos-López,  O.A.  et  al.  (2015)  Genomic  prediction  models
+for  count  data.  J.  Agric.  Biol.  Environ.  Stat.  20,  533 –554
+60.  Montesinos-López,  O.A.  et  al.  (2016)  Genomic  Bayesian  predic-
+tion  model  for  count  data  with  genotype  /C2  environment  interac-
+tion.  G3:  Genes|Genomes|Genetics  6,  1165 –1177
+61.  Montesinos-López,  O.A.  et  al.  (2017)  A  Bayesian  poisson-log-
+normal  model  for  count  data  for  multiple-trait  multiple-environ-
+ment  genomic-enabled  prediction.  G3:  Genes|Genomes|
+Genetics  7,  1595 –1606
+62.  Gianola,  D.  and  van  Kaam,  J.B.C.H.M.  (2008)  Reproducing  ker-
+nel  hilbert  space  regression  methods  for  genomic-assisted  pre-
+diction  of  quantitative  traits.  Genetics  178,  2289 –230363.  Philomin,  J.  et  al.  (2017)  Comparison  of  models  and  whole-
+genome  proﬁling  approaches  for  genomic-enabled  prediction
+of  Septoria  tritici  blotch,  Stagonospora  nodorum  blotch,  and
+tan  spot  resistance  in  wheat.  Plant  Genome  10,  1–16
+64.  Philomin,  J.  et  al.  (2017)  Genomic  and  pedigree-based  prediction
+for  leaf,  stem,  and  stripe  rust  resistance  in  wheat.  Theor.  Appl.
+Genet.  130,  1415 –1430
+65.  Varshney,  R.K.  (2016)  Exciting  journey  of  10  years  from  genomes
+to  ﬁelds  and  markets:  some  success  stories  of  genomics-
+assisted  breeding  in  chickpea,  pigeonpea  and  groundnut.  Plant
+Sci.  242,  98–107
+66.  Roorkiwal,  M.  et  al.  (2016)  Genome-enabled  prediction  models
+for  yield  related  traits  in  chickpea.  Front.  Plant  Sci.  7,  1666
+67.  Sukumaran,  S.  et  al.  (2017)  Genomic  prediction  with  pedigree
+and  genotype  /C2  environment  interaction  in  spring  wheat  grown  in
+South  and  West  Asia,  North  Africa,  and  Mexico.  G3:  Genes|
+Genomes|Genetics  7,  481 –197
+68.  Pérez  Rodríguez,  P.  et  al.  (2015)  A  pedigree  reaction  norm  model
+for  prediction  of  cotton  (Gossypium  sp.)  yield  in  multi-environment
+trials.  Crop  Sci.  55,  1143 –1151
+69.  Crossa,  J.  et  al.  (2016)  Genomic  prediction  of  gene  bank  wheat
+landraces.  G3:  Genes|Genomes|Genetics  6,  1819 –1834
+70.  Govidan,  V.  et  al.  (2016)  Genomic  prediction  for  grain  zinc  and
+iron  concentrations  in  spring  wheat.  Theor.  Appl.  Genet.  129,
+1595 –1605
+71.  Pérez-Rodríguez,  P.  et  al.  (2017)  Single-step  genomic  and  pedi-
+gree  genotype  /C2  environment  interaction  models  for  predicting
+wheat  lines  in  international  environments.  Plant  Genome  Pub-
+lished  online  May  5,  2017.  http://dx.doi.org/10.3835/
+plantgenome2016.09.0089
+72.  Vivek,  B.S.  et  al.  (2017)  Use  of  genomic  estimated  breeding
+values  results  in  rapid  genetic  gains  for  drought  tolerance  in
+maize.  Plant  Genome  10,  1–8
+73.  Zhang,  X.  et  al.  (2017)  Rapid  cycling  genomic  selection  in  a
+multiparental  tropical  maize  population.  G3:  Genes|Genomes|
+Genetics  7,  1–12
+74.  Montesinos-López,  O.A.  et  al.  (2017)  Predicting  grain  yield  using
+canopy  hyperspectral  reﬂectance  in  wheat  breeding  data.  Plant
+Methods  13,  4
+75.  Rutkoski,  J.  et  al.  (2016)  Predictor  traits  from  high-throughput
+phenotyping  improve  accuracy  of  pedigree  and  genomic  selec-
+tion  for  grain  yield  in  wheat.  G3  6,  2799 –2808
+76.  Reynolds,  M.  and  Langridge,  P.  (2016)  Physiological  breeding.
+Curr.  Opin.  Plant  Biol.  31,  162 –171
+77.  Sun,  J.  et  al.  (2017)  Multi-trait,  random  regression,  or  simple
+repeatability  model  in  high-throughput  phenotyping  data  improve
+genomic  prediction  for  grain  yield  in  wheat.  Plant  Genome  Pub-
+lished  online  Mary  18,  2017.  http://dx.doi.org/10.3835/
+plantgenome2016.11.011
+78.  Montesinos-López,  A.  et  al.  (2017)  Genomic  Bayesian  functional
+regression  models  with  interactions  for  predicting  wheat  grain
+yield  using  hyper-spectral  image  data.  Plant  Methods  62,  13
+79.  McCouch,  S.  et  al.  (2012)  Genomics  of  gene  bank:  a  case  study
+for  rice.  Am.  J.  Bot.  99,  407 –423
+80.  Yu,  X.  et  al.  (2016)  Genomic  prediction  contributing  to  a  promising
+global  strategy  to  turbocharge  gene  banks.  Nat.  Plants  2,  16150
+81.  Gorjanc,  G.  et  al.  (2016)  Initiating  maize  pre-breeding  programs
+using  genomic  selection  to  harness  polygenic  variation  from
+landrace  populations.  BMC  Genomics  17,  30
+Trends  in  Plant  Science,  November  2017,  Vol.  22,  No.  11  975
