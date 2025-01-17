@@ -1,6 +1,8 @@
 # LLM_Zeng24
 LLM camp by Dr. Huajun Zeng
 
+course material Github: https://github.com/JJ-Zhang-DS/chatbot-example-zeng
+
 # Syllabus
 
 
