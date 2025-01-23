@@ -6,6 +6,9 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
+
+
+
 if not os.getenv("RUNNING_IN_PRODUCTION"):
     app.logger.setLevel(logging.DEBUG)
 
@@ -22,5 +25,10 @@ db = SQLAlchemy(app)
 from . import views
 from . import models
 
+from src.app import app, db
+with app.app_context():
+    if not os.path.exists(db_path):
+        db.create_all()
+    
 if __name__ == "__main__":
     app.run(debug=True)

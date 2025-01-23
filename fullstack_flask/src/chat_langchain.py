@@ -12,7 +12,8 @@ from .models import db, ChatMessage
 pc = Pinecone()
 
 print("Connecting to Pinecone index")
-index_name = 'langchain-retrieval-augmentation-fast'
+# index_name = 'langchain-retrieval-augmentation-fast'
+index_name = 'lmm-power-analysis'
 index = pc.Index(index_name)
 index.describe_index_stats()
 
@@ -21,8 +22,9 @@ embeddings = OpenAIEmbeddings(model='text-embedding-ada-002')
 vectorstore = PineconeVectorStore(index, embeddings, text_field)
 
 print("Creating chains")
-template = """You are a helpful assistant. I will give you a list of articles with title and text. Please answer questions.
-Articles:
+template = """You are a helpful assistant. 
+I will give your articles focusing on genome breeding and AI application in breeding. Please answer questions.
+Articles based on the papers. you can find the papers in other sources. But keep in mind that you are experter in the field. 
 {context}
 
 Question: {question}

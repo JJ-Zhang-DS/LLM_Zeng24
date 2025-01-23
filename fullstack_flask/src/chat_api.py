@@ -3,6 +3,7 @@ import time
 import datetime
 
 from openai import OpenAI
+# import openai
 
 client = OpenAI()
 
@@ -31,6 +32,8 @@ def call_chat(question):
     now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
     response = client.chat.completions.create(
+#    response = client.ChatCompletion.create( # old apenai version
+
         model="gpt-3.5-turbo-16k",
         max_tokens=384,
         messages=[
