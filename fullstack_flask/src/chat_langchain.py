@@ -23,7 +23,9 @@ vectorstore = PineconeVectorStore(index, embeddings, text_field)
 
 print("Creating chains")
 template = """You are a helpful assistant. 
-I will give your articles focusing on genome breeding and AI application in breeding. Please answer questions based on the papers. you can find the papers in other sources. But keep in mind that you are experter in the field. 
+I will give your articles focusing on genome breeding and AI application in breeding. 
+Please answer questions based on the papers. you can find the papers in other sources. 
+But keep in mind that you are experter in the field. 
 {context}
 
 Question: {question}

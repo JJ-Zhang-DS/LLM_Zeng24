@@ -1,2 +1,4 @@
 .env
 sample/.env
+fullstack_flask/src/app.db
+.env.sample
