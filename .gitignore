@@ -1,5 +1,5 @@
 .env
 sample/.env
 fullstack_flask/src/app.db
-.env.sample
+fullstack_flask/.env.sample
 docker-compose.yaml
